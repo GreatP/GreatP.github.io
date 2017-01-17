@@ -162,7 +162,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -172,7 +172,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -235,7 +235,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/Leetcode_Two_Sum/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/纠删码（Erasure Code）浅析/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -260,8 +260,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/18/Leetcode_Two_Sum/" itemprop="url">
-                  Two Sum
+                <a class="post-title-link" href="/2017/01/18/纠删码（Erasure Code）浅析/" itemprop="url">
+                  纠删码（Erasure Code）浅析
                 </a>
               
             
@@ -275,9 +275,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T00:13:23+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T00:40:27+08:00">
                 2017-01-18
               </time>
             
@@ -296,23 +296,12 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Two-Sum/" itemprop="url" rel="index">
-                    <span itemprop="name">Two Sum</span>
+                  <a href="/categories/纠删码/" itemprop="url" rel="index">
+                    <span itemprop="name">纠删码</span>
                   </a>
                 </span>
 
@@ -329,8 +318,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/18/Leetcode_Two_Sum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/Leetcode_Two_Sum/" itemprop="commentCount"></span>
+                <a href="/2017/01/18/纠删码（Erasure Code）浅析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/纠删码（Erasure Code）浅析/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -357,30 +346,14 @@
 
       
         
-          
-            <blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[] TwoSum(<span class="keyword">int</span> nums[] , <span class="keyword">int</span> target)&#123;</div><div class="line">		Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer,Integer&gt;();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; nums.length ; i++)&#123;</div><div class="line">		<span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</div><div class="line">			result[<span class="number">0</span>] = i;</div><div class="line">			result[<span class="number">1</span>] = map.get(target-nums[i]);</div><div class="line">			&#125;</div><div class="line">			map.put(nums[i],i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li>Map是一种将一种兑现映射到其他对象的强大工具</li>
-<li>本题思路<ul>
-<li>将数组映射到map<integer,integer>,<strong>注意将nums[i]映射为Key,这样就可以利用map.get(Object key)得到数组下标</strong></integer,integer></li>
-<li>map.containsKey(Object key)能够得到key对应的value–本题的数组下标</li>
-</ul>
-</li>
-<li>HashMap常用函数：<ul>
-<li>Map.containsKey(Object key)–找key值对应的value值</li>
-<li>Map.containsValue(Object value)–找一个或多个key值对应的value</li>
-<li>Map.get(key)  返回key对应的value值 </li>
-<li>Map.put(key,value)  插入</li>
-<li>Map.size()  返回映射数</li>
-<li>Map.remove(key) 移除key值对应的键值对  </li>
-</ul>
-</li>
-</ul>
-
-          
+          <p>【摘要】：副本策略和纠删码是存储领域常见的两种数据冗余技术。相比于副本策略，纠删码具有更高的磁盘利用率。 Reed-Solomon码是一种常见的纠删码。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/01/18/纠删码（Erasure Code）浅析/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -417,7 +390,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/17/翻译_InfluxDB_1/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/翻译_InfluxDB_1/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -442,7 +415,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/17/翻译_InfluxDB_1/" itemprop="url">
+                <a class="post-title-link" href="/2017/01/18/翻译_InfluxDB_1/" itemprop="url">
                   Assessing Write Performance of InfluxDB Cluster using Amazon Web Services
                 </a>
               
@@ -457,10 +430,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T13:40:24+08:00">
-                2017-01-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T00:39:59+08:00">
+                2017-01-18
               </time>
             
 
@@ -478,7 +451,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -489,7 +462,7 @@
 
                 
                 
-                  , 
+                  . 
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -511,8 +484,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/17/翻译_InfluxDB_1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/17/翻译_InfluxDB_1/" itemprop="commentCount"></span>
+                <a href="/2017/01/18/翻译_InfluxDB_1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/翻译_InfluxDB_1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -649,7 +622,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/17/纠删码（Erasure Code）浅析/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/Leetcode_Two_Sum/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -674,8 +647,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/17/纠删码（Erasure Code）浅析/" itemprop="url">
-                  纠删码（Erasure Code）浅析
+                <a class="post-title-link" href="/2017/01/18/Leetcode_Two_Sum/" itemprop="url">
+                  Two Sum
                 </a>
               
             
@@ -689,10 +662,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T12:24:37+08:00">
-                2017-01-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T00:39:36+08:00">
+                2017-01-18
               </time>
             
 
@@ -710,12 +683,23 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/纠删码/" itemprop="url" rel="index">
-                    <span itemprop="name">纠删码</span>
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+                  . 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/Two-Sum/" itemprop="url" rel="index">
+                    <span itemprop="name">Two Sum</span>
                   </a>
                 </span>
 
@@ -732,8 +716,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/17/纠删码（Erasure Code）浅析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/17/纠删码（Erasure Code）浅析/" itemprop="commentCount"></span>
+                <a href="/2017/01/18/Leetcode_Two_Sum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/Leetcode_Two_Sum/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -760,14 +744,30 @@
 
       
         
-          <p>【摘要】：副本策略和纠删码是存储领域常见的两种数据冗余技术。相比于副本策略，纠删码具有更高的磁盘利用率。 Reed-Solomon码是一种常见的纠删码。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/17/纠删码（Erasure Code）浅析/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <blockquote>
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[] TwoSum(<span class="keyword">int</span> nums[] , <span class="keyword">int</span> target)&#123;</div><div class="line">		Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer,Integer&gt;();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; nums.length ; i++)&#123;</div><div class="line">		<span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</div><div class="line">			result[<span class="number">0</span>] = i;</div><div class="line">			result[<span class="number">1</span>] = map.get(target-nums[i]);</div><div class="line">			&#125;</div><div class="line">			map.put(nums[i],i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>Map是一种将一种兑现映射到其他对象的强大工具</li>
+<li>本题思路<ul>
+<li>将数组映射到map<integer,integer>,<strong>注意将nums[i]映射为Key,这样就可以利用map.get(Object key)得到数组下标</strong></integer,integer></li>
+<li>map.containsKey(Object key)能够得到key对应的value–本题的数组下标</li>
+</ul>
+</li>
+<li>HashMap常用函数：<ul>
+<li>Map.containsKey(Object key)–找key值对应的value值</li>
+<li>Map.containsValue(Object value)–找一个或多个key值对应的value</li>
+<li>Map.get(key)  返回key对应的value值 </li>
+<li>Map.put(key,value)  插入</li>
+<li>Map.size()  返回映射数</li>
+<li>Map.remove(key) 移除key值对应的键值对  </li>
+</ul>
+</li>
+</ul>
+
+          
         
       
     </div>
@@ -839,7 +839,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -848,7 +848,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
           
@@ -857,7 +857,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
