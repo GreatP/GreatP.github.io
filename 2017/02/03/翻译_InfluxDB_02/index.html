@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="翻译,InfluxDB,时间序列," />
 
 
 
@@ -58,15 +58,45 @@
 
 
 
-<meta name="description" content="做勤快的懒人，不做懒惰的勤快人--精品">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GreatP'Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Author:Paul Dix  –CTO
+简介历史上，时间序列数据与金融d中的应用程序相关联。然而，随着开发人员和企业渗迁移到更多地服务器、应用程序、架构、和物理世界，时间序列数据正在成为事实上的标准：即如何从实时和过去两个维度考虑存储、检索、和挖掘这些数据的。本文将介绍：
+
+时间序列是什么(它又不是什么)
+
+时间序列和传统数据负载有什么不同（如OLTP或全文搜索）
+
+调查InfluxData与">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Time-Series Matters For Metrics,Real-Time and Sensor Data">
+<meta property="og:url" content="http://yoursite.com/2017/02/03/翻译_InfluxDB_02/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="做勤快的懒人，不做懒惰的勤快人--精品">
+<meta property="og:description" content="Author:Paul Dix  –CTO
+简介历史上，时间序列数据与金融d中的应用程序相关联。然而，随着开发人员和企业渗迁移到更多地服务器、应用程序、架构、和物理世界，时间序列数据正在成为事实上的标准：即如何从实时和过去两个维度考虑存储、检索、和挖掘这些数据的。本文将介绍：
+
+时间序列是什么(它又不是什么)
+
+时间序列和传统数据负载有什么不同（如OLTP或全文搜索）
+
+调查InfluxData与">
+<meta property="og:image" content="http://i1.piimg.com/567571/bf2caeddf1513309.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/6999931c0e185188.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/58f8f45101a5c051.png">
+<meta property="og:image" content="http://p1.bqimg.com/567571/fd68330190d597b2.png">
+<meta property="og:image" content="http://p1.bqimg.com/567571/daff0f67ed4df64d.png">
+<meta property="og:image" content="http://p1.bpimg.com/567571/56cd46de0b691272.png">
+<meta property="og:image" content="http://p1.bqimg.com/567571/c4ed1db949c73800.png">
+<meta property="og:updated_time" content="2017-02-03T02:37:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GreatP'Blog">
-<meta name="twitter:description" content="做勤快的懒人，不做懒惰的勤快人--精品">
+<meta name="twitter:title" content="Why Time-Series Matters For Metrics,Real-Time and Sensor Data">
+<meta name="twitter:description" content="Author:Paul Dix  –CTO
+简介历史上，时间序列数据与金融d中的应用程序相关联。然而，随着开发人员和企业渗迁移到更多地服务器、应用程序、架构、和物理世界，时间序列数据正在成为事实上的标准：即如何从实时和过去两个维度考虑存储、检索、和挖掘这些数据的。本文将介绍：
+
+时间序列是什么(它又不是什么)
+
+时间序列和传统数据负载有什么不同（如OLTP或全文搜索）
+
+调查InfluxData与">
+<meta name="twitter:image" content="http://i1.piimg.com/567571/bf2caeddf1513309.png">
 
 
 
@@ -94,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/03/翻译_InfluxDB_02/"/>
 
 
 
 
 
-  <title> GreatP'Blog </title>
+  <title> Why Time-Series Matters For Metrics,Real-Time and Sensor Data | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -121,9 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -259,10 +287,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/02/03/翻译_InfluxDB_02/" itemprop="url">
-                  Why Time-Series Matters For Metrics,Real-Time and Sensor Data
-                </a>
+                Why Time-Series Matters For Metrics,Real-Time and Sensor Data
               
             
           </h1>
@@ -342,6 +367,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -356,9 +386,7 @@
       
 
       
-        
-          
-            <p><strong>Author:Paul Dix  –CTO</strong></p>
+        <p><strong>Author:Paul Dix  –CTO</strong></p>
 <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>历史上，时间序列数据与金融d中的应用程序相关联。然而，随着开发人员和企业渗迁移到更多地服务器、应用程序、架构、和物理世界，时间序列数据正在成为事实上的标准：即如何从实时和过去两个维度考虑存储、检索、和挖掘这些数据的。本文将介绍：</p>
 <ul>
 <li><p>时间序列是什么(它又不是什么)</p>
@@ -404,613 +432,66 @@
 <p>单个InfluxDB提供的性能水平超出了用户在10台机器上部署HBase、Canssandra、或Elastic所能做到的性能水平。InfluxDB针对此用例进行了高度优化，因此与其他解决方案相比，可提供10-1000倍的性能。随着时间序列作为定制DevOps监控和指标、实时分析、传感器数据和物联网的关键因素，InfluxData成为NoSQL之后的下一波数据平台。</p>
 <p>s</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/30/Leetcode_Ingeter_reverse/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/30/Leetcode_Ingeter_reverse/" itemprop="url">
-                  Reverse Integer
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-30T00:06:39+08:00">
-                2017-01-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Reverse-Integer/" itemprop="url" rel="index">
-                    <span itemprop="name">Reverse Integer</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/翻译/" rel="tag"># 翻译</a>
           
-
+            <a href="/tags/InfluxDB/" rel="tag"># InfluxDB</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/30/Leetcode_Ingeter_reverse/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/30/Leetcode_Ingeter_reverse/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
+            <a href="/tags/时间序列/" rel="tag"># 时间序列</a>
           
-
-          
-
-          
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public int reverse(int x)&#123;</div><div class="line">		int temp = 0 ;</div><div class="line">		long result = 0; //result 申请为long型，因为可能转变之后会变大</div><div class="line">		while(x != 0)&#123;		//此处不能是while(x),因为x为int而不是boolean</div><div class="line">		temp = x%10;</div><div class="line">		result = result*10 + temp;</div><div class="line">		x = x/10;</div><div class="line">		if(result &gt; Integer.MAX_VALUE || result &lt; Integer.MIN_VALUE)</div><div class="line">		return 0;</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/翻译_InfluxDB_1/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/30/Leetcode_Ingeter_reverse/" rel="next" title="Reverse Integer">
+                <i class="fa fa-chevron-left"></i> Reverse Integer
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/01/18/翻译_InfluxDB_1/" itemprop="url">
-                  Assessing Write Performance of InfluxDB Cluster using Amazon Web Services
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T00:39:59+08:00">
-                2017-01-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Translate/" itemprop="url" rel="index">
-                    <span itemprop="name">Translate</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Translate/时间序列数据/" itemprop="url" rel="index">
-                    <span itemprop="name">时间序列数据</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/18/翻译_InfluxDB_1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/翻译_InfluxDB_1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><strong>Author:</strong></p>
-<ul>
-<li><strong>Todd Pensen:VP of Engineering</strong></li>
-<li><strong>Robert Winslow:External Contributor</strong></li>
-</ul>
-<h4 id="What-is-Time-Series-Data"><a href="#What-is-Time-Series-Data" class="headerlink" title="What is Time-Series Data"></a>What is Time-Series Data</h4><blockquote>
-<p>时间序列数据是一系列值，通常由来自一段时间间隔内相同数据源的连续 measurements组成。换句话说，如果你在图上绘制你的值，时间轴一定是你的坐标轴之一。例如，时间序列数据可以由气象站或RFID的传感器、应用程序、服务器、网络交换机等IT基础设施组件、或者股票交易系统产生。</p>
-<p>时间序列数据库被优化用于时间序列数据的<strong>收集、存储、检索、和处理</strong>。将其与为存储JSON文档而进行优化的文档数据库、针对全文搜索而优化的搜索数据库、针对表格式数据存储而优化的传统关系型数据库进行比较，是再好不过的了。</p>
-</blockquote>
-<ul>
-<li>Baron Schwarts 概述了特定时间序列数据库的一些典型特征：<ul>
-<li>数据库90%以上工作负载是高频写带来的</li>
-<li>数据通常<strong>追加写入到</strong>现有的measurements</li>
-<li>写操作通常是顺序执行，比如：每秒或者每一分执行一次</li>
-<li>如果时间序列数据库受到资源约束，通常是I/O上限</li>
-<li>很少升级以纠正或者修改单个值</li>
-<li>如果删除数据，几乎时间范围都很大(数天、数月、数年)，很少删除某个特定时间节点的数据</li>
-<li>在数据库查询数据，通常是按某种序列排序，这种序列可能是基于时间的运算或者函数。</li>
-<li>并发读或者读取多个序列的查询很常见</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://www.xaprb.com/blog/2014/06/08/time-series-database-requirements/" target="_blank" rel="external">参考:https://www.xaprb.com/blog/2014/06/08/time-series-database-requirements/</a></p>
-<h4 id="关于InfluxDB"><a href="#关于InfluxDB" class="headerlink" title="关于InfluxDB"></a>关于InfluxDB</h4><h4 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h4><ul>
-<li><p>对于初始阶段的基准测试，仅关注写吞吐量。因为研究的大多数场景的写入负载比查询负载要大得多，所以我们认为能满足写入路径的负载，同样也能正常处理查询负载。(==数据库负载可从写入、存储、查询考察，以常识推理主要矛盾，针对主要矛盾做研究==)</p>
-</li>
-<li><p>在构建这个基准测试构件时，确定了与扩展写入性能最相关的参数，将在下面进一步详细描述，我们研究了三个方面对性能的影响：</p>
-<ul>
-<li>Data Node的数量</li>
-<li>副本个数</li>
-<li>batch size</li>
-</ul>
-</li>
-<li>这些因素的影响趋势比较直接，<strong>我们预计吞吐量随着数据节点的增加和batch size的增加而增加，随着副本数的增加而减小（因为副本意味着数据必须在整个集群中多次写入）</strong></li>
-<li>此外，我们在基准测试期间，使用不同数量的worker，以确保我们能够生成和发送足够大的数据量，使测试期间集群真正达到饱满</li>
-</ul>
-<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p>对于这个测试基准，我们专注于一个测试集，它模拟了一个常见的DevOps监控和指标用例，其中一组服务器周期性的以固定时间间隔报告系统和应用程序的监控指标。每10s对9个子系统（CPU、内存、磁盘、磁盘I/O、内核、网络、Redis、PostgreSQL和Nginx）采集100个值。为了做关键比较，我们考察了一个数据集，这些数据集代表了过去24个小时内10,000台服务器产生的数据-了一个是较大规模的生产集群。我们对不同的数据集进行了颜色上的区分，这包括了时间和服务器的数量。<br><img src="http://i1.piimg.com/567571/37dc2129c4f26577.png" alt=""></p>
-<p>这只是基准测试套件的一个子集，但它是一个有代表性的例子，在本文结束时，我们将讨论其他变量对性能的影响。</p>
-<p>==注意：为了在许多不同的运行中保持基准时间合理，我们使用固定时间限制执行批量时间加载，这意味着整个数据集并不总是加载完成。==</p>
-<h4 id="集群规模和副本因素"><a href="#集群规模和副本因素" class="headerlink" title="集群规模和副本因素"></a>集群规模和副本因素</h4><p>当考察集群吞吐速率时，有两个主要因素（数据节点数和副本数）对总吞吐量有最大的影响。通常，对于要求冗余或者高可用的工作负载，我们建议使用RF=2，使用更大的副本数能获得额外的弹性,在数据丢失可接受的情况下为追求最大吞吐量，副本数为1就比较适合。下面的图展现了有4个数据节点的集群中，不同副本数和每个请求worker(==类似采集器==)发送batch size为4000个数据点之间的折中</p>
-<p><img src="http://i1.piimg.com/567571/915d406779ba1afd.png" alt=""></p>
-<blockquote>
-<p>如我们所见，在吞吐量和数据节点的个数之间，存在很强的正相关，这是数据平台中可水平伸缩的一方面。显然，有一个论点，那就是网络串扰将限制横向扩展的效率，但这些结果表明32集群节点仍然不受这些二阶影响的阻碍</p>
-<p>结论：InfluxEnterprise 的写是可以水平扩展的，增加到32个数据节点的时候，吞吐量随着数据节点的增加而增加</p>
-</blockquote>
-<p>此外，在我们构建测试时，我们尝试了各种数量的workers发送数据，来看达到什么级别的并发性，集群的写吞吐量会达到饱和。下图显示了有4个数据节点的集群中增加workers的数量的影响，每个worker发送批次为5000数据点。</p>
-<p><img src="http://i1.piimg.com/567571/0d5a90a43aa6d3dc.png" alt=""></p>
-<blockquote>
-<p>如图所示，使用更多地workers写入数据，可以获得更好的吞吐量，在这里，最高配置的数据节点能配置8个workers，显然，这取决于工作负载，因为我们的基准测试中每个worker尽可能快的顺序发布每个batch</p>
-<p>结论：为了最大的写性能，确保在每个数据节点上使用多并发</p>
-</blockquote>
-<h4 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h4><p>最后一个，对写操作性能有重要影响的参数是batch size，当谈论batch size时，我们指的是在单个请求中发送到InfluxDB集群中值的个数，因为每个请求都有着显著地网络和HTTP开销，除了数据库处理的请求，更大的batch size 往往使整体处理效率更高。在下面的图表中，可以看到总体写吞吐量随着batch size 的增大而增加，一般来说，建议batch size设为 5000到10000,可以看到，随着batch size 接近8000和16000，增加batch size的有效性正在下降。</p>
-<p><img src="http://i1.piimg.com/567571/ff845956baaa5312.png" alt=""><br>在实践中，极大的batch size的缺点是单个有效负载变得相当大，在网络上传输变得更慢，并且需要更多服务器资源，建议测试更大的batch size，并选择最高的batch size,使吞吐量显著高于之前的大小。换句话说，如果将batch size增加一倍，只能看到吞吐量增加5%，那么可能已经达到了收益递减的点，这时应该使用之前的batch size</p>
-<blockquote>
-<p>通常，使用更大的batch size可以增加集群的总写入吞吐量</p>
-</blockquote>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li>在这篇基准测试的论文中，从3个方面，考察了InfluxEnterprise的写性能<ul>
-<li>Cluster size</li>
-<li>Replication Factor</li>
-<li>Batch size</li>
-</ul>
-</li>
-<li>基准测试和测试结果展现了随着这几个变量，InfluxEnterprise通常会<ul>
-<li>数据节点越多，写吞吐量越大</li>
-<li>副本数越多，写吞吐量越小</li>
-<li>batch size 越大，写吞吐量越大</li>
-</ul>
-</li>
-</ul>
-<p>好消息是，副本数为1的情况下，InfluxEnterprise的一个32节点集群能够每秒处理超过1110万次写入；副本数为2的情况下，能够处理超过930万次写入；与之相对，单个数据节点–即使是性能最高的硬件–通常在100万次的写入操作就达到了性能峰值。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/Leetcode_Two_Sum/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/18/Leetcode_Two_Sum/" itemprop="url">
-                  Two Sum
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T00:39:36+08:00">
-                2017-01-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Two-Sum/" itemprop="url" rel="index">
-                    <span itemprop="name">Two Sum</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/18/Leetcode_Two_Sum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/Leetcode_Two_Sum/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[] TwoSum(<span class="keyword">int</span> nums[] , <span class="keyword">int</span> target)&#123;</div><div class="line">		Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer,Integer&gt;();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; nums.length ; i++)&#123;</div><div class="line">		<span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</div><div class="line">			result[<span class="number">0</span>] = i;</div><div class="line">			result[<span class="number">1</span>] = map.get(target-nums[i]);</div><div class="line">			&#125;</div><div class="line">			map.put(nums[i],i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li>Map是一种将一种兑现映射到其他对象的强大工具</li>
-<li>本题思路<ul>
-<li>将数组映射到map<integer,integer>,<strong>注意将nums[i]映射为Key,这样就可以利用map.get(Object key)得到数组下标</strong></integer,integer></li>
-<li>map.containsKey(Object key)能够得到key对应的value–本题的数组下标</li>
-</ul>
-</li>
-<li>HashMap常用函数：<ul>
-<li>Map.containsKey(Object key)–找key值对应的value值</li>
-<li>Map.containsValue(Object value)–找一个或多个key值对应的value</li>
-<li>Map.get(key)  返回key对应的value值 </li>
-<li>Map.put(key,value)  插入</li>
-<li>Map.size()  返回映射数</li>
-<li>Map.remove(key) 移除key值对应的键值对  </li>
-</ul>
-</li>
-</ul>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
           
           </div>
@@ -1018,6 +499,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/03/翻译_InfluxDB_02/"
+           data-title="Why Time-Series Matters For Metrics,Real-Time and Sensor Data" data-url="http://yoursite.com/2017/02/03/翻译_InfluxDB_02/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -1037,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/jordan.png"
@@ -1128,6 +626,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间序列数据是什么？"><span class="nav-text">时间序列数据是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#水平用例"><span class="nav-text">水平用例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间序列负载"><span class="nav-text">时间序列负载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么使得InfluxData不同"><span class="nav-text">什么使得InfluxData不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxData栈"><span class="nav-text">InfluxData栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxDB的数据模型"><span class="nav-text">InfluxDB的数据模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxDB-VS-APM和日志应用程序"><span class="nav-text">InfluxDB VS.APM和日志应用程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxDB-vs-其他数据库"><span class="nav-text">InfluxDB vs. 其他数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxDB-VS-Elastic"><span class="nav-text">InfluxDB VS. Elastic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxDB-VS-流处理方法"><span class="nav-text">InfluxDB VS.流处理方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InfluxData是时间序列数据"><span class="nav-text">InfluxData是时间序列数据</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -1238,6 +752,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
