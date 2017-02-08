@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Leetcode,Palindrome," />
 
 
 
@@ -58,22 +58,16 @@
 
 
 
-<meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.
-
-12345678910111213public class">
+<meta name="description" content="123456789101112131415public class Solution&amp;#123;	public boolean isPalindrome(int x)&amp;#123;		if(x &amp;lt; 0)		return false;				int result = 0 ;		int temp = x ;				while(temp != 0)&amp;#123;			result = result *">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Two Sum">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/Leetcode_Two_Sum/index.html">
+<meta property="og:title" content="Palindrome Number">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/Leetcode_Palindrome Number/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.
-
-12345678910111213public class">
-<meta property="og:updated_time" content="2017-02-08T12:10:45.000Z">
+<meta property="og:description" content="123456789101112131415public class Solution&amp;#123;	public boolean isPalindrome(int x)&amp;#123;		if(x &amp;lt; 0)		return false;				int result = 0 ;		int temp = x ;				while(temp != 0)&amp;#123;			result = result *">
+<meta property="og:updated_time" content="2017-02-08T12:36:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Two Sum">
-<meta name="twitter:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.
-
-12345678910111213public class">
+<meta name="twitter:title" content="Palindrome Number">
+<meta name="twitter:description" content="123456789101112131415public class Solution&amp;#123;	public boolean isPalindrome(int x)&amp;#123;		if(x &amp;lt; 0)		return false;				int result = 0 ;		int temp = x ;				while(temp != 0)&amp;#123;			result = result *">
 
 
 
@@ -101,13 +95,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/Leetcode_Two_Sum/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/Leetcode_Palindrome Number/"/>
 
 
 
 
 
-  <title> Two Sum | GreatP'Blog </title>
+  <title> Palindrome Number | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -240,7 +234,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_Two_Sum/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_Palindrome Number/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -264,7 +258,7 @@
             
             
               
-                Two Sum
+                Palindrome Number
               
             
           </h1>
@@ -279,7 +273,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:10:45+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:36:33+08:00">
                 2017-02-08
               </time>
             
@@ -320,8 +314,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/08/Leetcode_Two_Sum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_Two_Sum/" itemprop="commentCount"></span>
+                <a href="/2017/02/08/Leetcode_Palindrome Number/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_Palindrome Number/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -352,28 +346,12 @@
       
 
       
-        <blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[] TwoSum(<span class="keyword">int</span> nums[] , <span class="keyword">int</span> target)&#123;</div><div class="line">		Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer,Integer&gt;();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; nums.length ; i++)&#123;</div><div class="line">		<span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</div><div class="line">			result[<span class="number">0</span>] = i;</div><div class="line">			result[<span class="number">1</span>] = map.get(target-nums[i]);</div><div class="line">			&#125;</div><div class="line">			map.put(nums[i],i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li>Map是一种将一种兑现映射到其他对象的强大工具</li>
-<li>本题思路<ul>
-<li>将数组映射到map<integer,integer>,<strong>注意将nums[i]映射为Key,这样就可以利用map.get(Object key)得到数组下标</strong></integer,integer></li>
-<li>map.containsKey(Object key)能够得到key对应的value–本题的数组下标</li>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public boolean isPalindrome(int x)&#123;</div><div class="line">		if(x &lt; 0)</div><div class="line">		return false;</div><div class="line">		</div><div class="line">		int result = 0 ;</div><div class="line">		int temp = x ;</div><div class="line">		</div><div class="line">		while(temp != 0)&#123;</div><div class="line">			result = result * 10 + temp%10;</div><div class="line">			temp = temp/10;</div><div class="line">		&#125;</div><div class="line">		return x == result ? true : false;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
+<li>小于0的数不考虑</li>
+<li>将int x 反转为新的result，如果和原来的数相等，就是回文</li>
 </ul>
-</li>
-<li>HashMap常用函数：<ul>
-<li>Map.containsKey(Object key)–找key值对应的value值</li>
-<li>Map.containsValue(Object value)–找一个或多个key值对应的value</li>
-<li>Map.get(key)  返回key对应的value值 </li>
-<li>Map.put(key,value)  插入</li>
-<li>Map.size()  返回映射数</li>
-<li>Map.remove(key) 移除key值对应的键值对  </li>
-</ul>
-</li>
-</ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">while(x &gt; temp)&#123;</div><div class="line">// 	    result = result * 10 + temp%10;</div><div class="line">// 	    temp = temp/10;</div><div class="line">// 	&#125;</div><div class="line">// 	return (x == temp || temp == x/10)</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -394,13 +372,21 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
+          
+            <a href="/tags/Palindrome/" rel="tag"># Palindrome</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/Leetcode_Ingeter_reverse/" rel="next" title="Reverse Integer">
-                <i class="fa fa-chevron-left"></i> Reverse Integer
+              <a href="/2017/02/08/Leetcode_ZigZag Conversion/" rel="next" title="ZigZag Conversion">
+                <i class="fa fa-chevron-left"></i> ZigZag Conversion
               </a>
             
           </div>
@@ -408,10 +394,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/08/Leetcode_ZigZag Conversion/" rel="prev" title="ZigZag Conversion">
-                ZigZag Conversion <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -437,8 +419,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/Leetcode_Two_Sum/"
-           data-title="Two Sum" data-url="http://yoursite.com/2017/02/08/Leetcode_Two_Sum/">
+      <div class="ds-thread" data-thread-key="2017/02/08/Leetcode_Palindrome Number/"
+           data-title="Palindrome Number" data-url="http://yoursite.com/2017/02/08/Leetcode_Palindrome Number/">
       </div>
     
   </div>
@@ -572,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li></ol></div>
             
 
           </div>
