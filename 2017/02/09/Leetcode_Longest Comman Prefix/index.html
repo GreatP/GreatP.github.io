@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,Conversion," />
+  <meta name="keywords" content="Leetcode,Prefix," />
 
 
 
@@ -58,16 +58,37 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819202122public class Solution&amp;#123;	public String convert(String s , int numRows)&amp;#123;		char ch[] = s.toCharArray();  //将String转化为char处理		int len = ch.length;		StringBuffer">
+<meta name="description" content="思路：
+判断是否为null
+将String[] strs 进行升序排列
+new一个StringBuilder，可以利用其append()
+将排序后的第一个和最后一个进行比较，从第一个字符不同循环结束，代表已经找到了最长前缀
+将共同前缀连接起来返回为String
+
+1234567891011121314151617181920212223public class Solution&amp;#123;	pub">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZigZag Conversion">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/Leetcode_ZigZag Conversion/index.html">
+<meta property="og:title" content="Longest Comman Prefix">
+<meta property="og:url" content="http://yoursite.com/2017/02/09/Leetcode_Longest Comman Prefix/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="12345678910111213141516171819202122public class Solution&amp;#123;	public String convert(String s , int numRows)&amp;#123;		char ch[] = s.toCharArray();  //将String转化为char处理		int len = ch.length;		StringBuffer">
-<meta property="og:updated_time" content="2017-02-08T12:11:07.000Z">
+<meta property="og:description" content="思路：
+判断是否为null
+将String[] strs 进行升序排列
+new一个StringBuilder，可以利用其append()
+将排序后的第一个和最后一个进行比较，从第一个字符不同循环结束，代表已经找到了最长前缀
+将共同前缀连接起来返回为String
+
+1234567891011121314151617181920212223public class Solution&amp;#123;	pub">
+<meta property="og:updated_time" content="2017-02-09T12:17:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZigZag Conversion">
-<meta name="twitter:description" content="12345678910111213141516171819202122public class Solution&amp;#123;	public String convert(String s , int numRows)&amp;#123;		char ch[] = s.toCharArray();  //将String转化为char处理		int len = ch.length;		StringBuffer">
+<meta name="twitter:title" content="Longest Comman Prefix">
+<meta name="twitter:description" content="思路：
+判断是否为null
+将String[] strs 进行升序排列
+new一个StringBuilder，可以利用其append()
+将排序后的第一个和最后一个进行比较，从第一个字符不同循环结束，代表已经找到了最长前缀
+将共同前缀连接起来返回为String
+
+1234567891011121314151617181920212223public class Solution&amp;#123;	pub">
 
 
 
@@ -95,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/Leetcode_ZigZag Conversion/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/09/Leetcode_Longest Comman Prefix/"/>
 
 
 
 
 
-  <title> ZigZag Conversion | GreatP'Blog </title>
+  <title> Longest Comman Prefix | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -234,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_ZigZag Conversion/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/09/Leetcode_Longest Comman Prefix/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -258,7 +279,7 @@
             
             
               
-                ZigZag Conversion
+                Longest Comman Prefix
               
             
           </h1>
@@ -273,8 +294,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:11:07+08:00">
-                2017-02-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T20:17:21+08:00">
+                2017-02-09
               </time>
             
 
@@ -314,8 +335,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/08/Leetcode_ZigZag Conversion/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_ZigZag Conversion/" itemprop="commentCount"></span>
+                <a href="/2017/02/09/Leetcode_Longest Comman Prefix/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/Leetcode_Longest Comman Prefix/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,31 +367,24 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public String convert(String s , int numRows)&#123;</div><div class="line">		char ch[] = s.toCharArray();  //将String转化为char处理</div><div class="line">		int len = ch.length;</div><div class="line">		StringBuffer sb[] = new StringBuffer[numRows]; //创建numRows个StringBuffer</div><div class="line">		</div><div class="line">		for(int i = 0 ; i &lt; numRows ; i++)</div><div class="line">		sb[i] = new StringBuffer();	//构造字符串缓冲区</div><div class="line">		</div><div class="line">		int i = 0;</div><div class="line">		while(i &lt; len)&#123;</div><div class="line">			for(int index = 0 ; index &lt; numRows &amp;&amp; i &lt; len ; index++)</div><div class="line">			sb[index].append(ch[i++]); </div><div class="line">			</div><div class="line">			for(int index = numRows - 2 ; index &gt;= 1 &amp;&amp; i &lt; len ; index--)</div><div class="line">			sb[index].append(ch[i++]);</div><div class="line">		&#125;</div><div class="line">		for(int index = 1 ; index &lt; numRows ; index++)</div><div class="line">		sb[0].append(sb[index]);</div><div class="line">		return sb[0].toString();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="补充：StringBuffer类"><a href="#补充：StringBuffer类" class="headerlink" title="补充：StringBuffer类"></a>补充：StringBuffer类</h4><p><a href="http://tool.oschina.net/apidocs/apidoc?api=jdk-zh" target="_blank" rel="external">在线帮助文档</a></p>
+        <h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><ul>
+<li>判断是否为null</li>
+<li>将String[] strs 进行升序排列</li>
+<li>new一个StringBuilder，可以利用其append()</li>
+<li>将排序后的第一个和最后一个进行比较，从第一个字符不同循环结束，代表已经找到了最长前缀</li>
+<li>将共同前缀连接起来返回为String</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Solution&#123;</div><div class="line">	public String longestCommanPrefix(String[] strs)&#123;</div><div class="line">		if(strs.length == 0 || strs == null) //此处不能是strs == &quot;&quot;</div><div class="line">		return &quot;&quot;;</div><div class="line">		</div><div class="line">		StringBuilder result = new StringBuileder();</div><div class="line">		Arrays.sort(strs);			//利用Arrays.sort()排序</div><div class="line">		</div><div class="line">		char a[] = strs[0].toCharArray();	  //要用到数组的下标，进行转化</div><div class="line">		char b[] = strs[strs.length-1].toCharArray();</div><div class="line">		</div><div class="line">		for(int i = 0 ; i &lt; a.length ; i++)&#123;</div><div class="line">			if(b.length &gt; i &amp;&amp; a[i] == b[i])&#123;  </div><div class="line">			result.append(a[i]);</div><div class="line">			&#125;else&#123;</div><div class="line">				return result.toString();	//此处return用来终止首次出现a[i] != b[i]的情况，没有会将相同后缀返回</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		return result.toString();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Arrays类：</p>
 <ul>
-<li>线程安全的可变字符序列，一个类似于String的字符串缓冲区，但不能修改</li>
-<li>StringBuffer上的主要操作是append和insert方法，可接受<strong>任意类型的数据</strong></li>
-<li>例如:<ul>
-<li>z引用的当前内容为start，调用z.append(“le”)会使字符串缓冲区包含“startle”</li>
-<li>z.insert(4,le),将更改字符串缓冲区，使它包含 “starlet”</li>
+<li>此类包含用来操作数组（比如<strong>排序和搜索</strong>）的各种方法（sort()、equals()等）</li>
+<li>static void sort()<ul>
+<li>sort(char[] a)</li>
+<li>sort(char[] a , int fromIndex , int toIndex) 对指定char型数组进行升序排列，排序范围从fromIndex(包含)到toIndex(不包含) </li>
 </ul>
 </li>
-<li>通常，如果z引用当前StringBuilder的一个实例，sb.append(x)和sb.insert(sb.length(),x)具有相同效果</li>
-<li><strong>从JDK5开始，为该类补充了一个单线程使用的等价类，即StringBuilder。与该类相比，通常优先使用StringBuilder类，因为它支持所有相同的操作，但是不执行同步，所以速度更快</strong></li>
 </ul>
-<p>常用方法：append()、insert()、delete()、reverse()等</p>
-<ul>
-<li>append(char c)</li>
-<li>append(char[] str)</li>
-<li>append(String str) </li>
-<li>append(char[] str , int offset , int len)</li>
-<li>capacity()</li>
-<li>charAt()</li>
-<li>insert(int offset , char[] str)</li>
-<li>lastIndexof(String str)</li>
-<li>toString()</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class sortTest &#123;</div><div class="line">    public void sort(String[] str)&#123;</div><div class="line">     // String[] str = &#123;&quot;acc&quot; , &quot;c&quot; , &quot;cc&quot;&#125;;</div><div class="line">        Arrays.sort(str);</div><div class="line">        for(String result : str)</div><div class="line">            System.out.println(result);</div><div class="line">    &#125;</div><div class="line">    public static void main(String[] args)&#123;</div><div class="line">        sortTest s = new sortTest();</div><div class="line">        String[] strs = &#123;&quot;acc&quot; , &quot;c&quot; , &quot;cc&quot;&#125;;</div><div class="line">        s.sort(strs);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">输出：</div><div class="line">acc</div><div class="line">c</div><div class="line">cc</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -396,7 +410,7 @@
           
             <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
-            <a href="/tags/Conversion/" rel="tag"># Conversion</a>
+            <a href="/tags/Prefix/" rel="tag"># Prefix</a>
           
         </div>
       
@@ -405,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/Leetcode_Two_Sum/" rel="next" title="Two Sum">
-                <i class="fa fa-chevron-left"></i> Two Sum
+              <a href="/2017/02/09/Leetcode_Roman to Integer/" rel="next" title="Roman to Integer">
+                <i class="fa fa-chevron-left"></i> Roman to Integer
               </a>
             
           </div>
@@ -414,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/08/Leetcode_Palindrome Number/" rel="prev" title="Palindrome Number">
-                Palindrome Number <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -443,8 +453,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/Leetcode_ZigZag Conversion/"
-           data-title="ZigZag Conversion" data-url="http://yoursite.com/2017/02/08/Leetcode_ZigZag Conversion/">
+      <div class="ds-thread" data-thread-key="2017/02/09/Leetcode_Longest Comman Prefix/"
+           data-title="Longest Comman Prefix" data-url="http://yoursite.com/2017/02/09/Leetcode_Longest Comman Prefix/">
       </div>
     
   </div>
@@ -578,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#补充：StringBuffer类"><span class="nav-text">补充：StringBuffer类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路："><span class="nav-text">思路：</span></a></li></ol></div>
             
 
           </div>
