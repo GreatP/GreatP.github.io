@@ -235,6 +235,156 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_String to Integer(atoi)/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="GreatP">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/jordan.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="GreatP'Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/08/Leetcode_String to Integer(atoi)/" itemprop="url">
+                  String to Integer
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:09:42+08:00">
+                2017-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/08/Leetcode_String to Integer(atoi)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_String to Integer(atoi)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public int myAtoi(String str)&#123;</div><div class="line">		int index = 0;</div><div class="line">		int len = str.length();</div><div class="line">		int sign = 1;</div><div class="line">		int total = 0;</div><div class="line">		//排除String为空的情况</div><div class="line">		if(len == 0)</div><div class="line">		return 0;</div><div class="line">		</div><div class="line">		//排除String开始为空字符的情况</div><div class="line">		while(str.charAt(index) == &apos; &apos;)</div><div class="line">		index++;</div><div class="line">		</div><div class="line">		//确定首个非空字符正负符号</div><div class="line">		if(str.charAt(index) == &apos;+&apos; || str.charAt(index) == &apos;-&apos;)&#123;&#125;</div><div class="line">		sign = str.charAt(index) == &apos;+&apos; ? 1 : -1;</div><div class="line">		index++;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		//reverse</div><div class="line">		while(index &lt; len )&#123;</div><div class="line">			int digit = str.charAt(index) - &apos;0&apos;;</div><div class="line">			if(digit &lt; 0 || digit &gt; 9)</div><div class="line">			break;</div><div class="line">			</div><div class="line">			//检查是否有溢出情况,要记住这种巧妙地方法</div><div class="line">			if(total &gt; Integer.MAX_VALUE / 10 || total == Integer.MAX_VALUE / 10 &amp;&amp; digit &gt; Integer.MAX_VALUE % 10)</div><div class="line">			return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;</div><div class="line">			</div><div class="line">			total = total*10 + digit;</div><div class="line">			index++;</div><div class="line">		&#125;</div><div class="line">		return total*sign;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/04/翻译_InfluxDB_3/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -928,7 +1078,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -946,7 +1096,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>
