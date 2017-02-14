@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,atio," />
+  <meta name="keywords" content="Leetcode,Sudoku," />
 
 
 
@@ -58,16 +58,31 @@
 
 
 
-<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536public class Solution&amp;#123;	public int myAtoi(String str)&amp;#123;		int index = 0;		int len = str.length();		int sign = 1;		int total = 0;">
+<meta name="description" content="思路
+碰到判断一个容器中是否有相同元素时，都可以考虑用HashSet来解决
+此题中一共需要创建9个Rows、9Cols、9Cubes容器，所以要将new放进第一层for循环中
+利用HashSet中的add(),如果含有此元素就返回false，不存在就放进容器，好用
+
+123456789101112131415161718192021222324public class Solution&amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="String to Integer">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/Leetcode_String to Integer(atoi)/index.html">
+<meta property="og:title" content="Valid Sudoku">
+<meta property="og:url" content="http://yoursite.com/2017/02/14/Leetcode_Valid Sudoku/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536public class Solution&amp;#123;	public int myAtoi(String str)&amp;#123;		int index = 0;		int len = str.length();		int sign = 1;		int total = 0;">
-<meta property="og:updated_time" content="2017-02-08T12:09:42.000Z">
+<meta property="og:description" content="思路
+碰到判断一个容器中是否有相同元素时，都可以考虑用HashSet来解决
+此题中一共需要创建9个Rows、9Cols、9Cubes容器，所以要将new放进第一层for循环中
+利用HashSet中的add(),如果含有此元素就返回false，不存在就放进容器，好用
+
+123456789101112131415161718192021222324public class Solution&amp;#123;">
+<meta property="og:updated_time" content="2017-02-14T12:45:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="String to Integer">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536public class Solution&amp;#123;	public int myAtoi(String str)&amp;#123;		int index = 0;		int len = str.length();		int sign = 1;		int total = 0;">
+<meta name="twitter:title" content="Valid Sudoku">
+<meta name="twitter:description" content="思路
+碰到判断一个容器中是否有相同元素时，都可以考虑用HashSet来解决
+此题中一共需要创建9个Rows、9Cols、9Cubes容器，所以要将new放进第一层for循环中
+利用HashSet中的add(),如果含有此元素就返回false，不存在就放进容器，好用
+
+123456789101112131415161718192021222324public class Solution&amp;#123;">
 
 
 
@@ -95,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/Leetcode_String to Integer(atoi)/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/14/Leetcode_Valid Sudoku/"/>
 
 
 
 
 
-  <title> String to Integer | GreatP'Blog </title>
+  <title> Valid Sudoku | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -234,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_String to Integer(atoi)/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/14/Leetcode_Valid Sudoku/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -258,7 +273,7 @@
             
             
               
-                String to Integer
+                Valid Sudoku
               
             
           </h1>
@@ -273,8 +288,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:09:42+08:00">
-                2017-02-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-14T20:45:36+08:00">
+                2017-02-14
               </time>
             
 
@@ -314,8 +329,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/08/Leetcode_String to Integer(atoi)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_String to Integer(atoi)/" itemprop="commentCount"></span>
+                <a href="/2017/02/14/Leetcode_Valid Sudoku/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/14/Leetcode_Valid Sudoku/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,7 +361,23 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public int myAtoi(String str)&#123;</div><div class="line">		int index = 0;</div><div class="line">		int len = str.length();</div><div class="line">		int sign = 1;</div><div class="line">		int total = 0;</div><div class="line">		//排除String为空的情况</div><div class="line">		if(len == 0)</div><div class="line">		return 0;</div><div class="line">		</div><div class="line">		//排除String开始为空字符的情况</div><div class="line">		while(str.charAt(index) == &apos; &apos;)</div><div class="line">		index++;</div><div class="line">		</div><div class="line">		//确定首个非空字符正负符号</div><div class="line">		if(str.charAt(index) == &apos;+&apos; || str.charAt(index) == &apos;-&apos;)&#123;&#125;</div><div class="line">		sign = str.charAt(index) == &apos;+&apos; ? 1 : -1;</div><div class="line">		index++;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		//reverse</div><div class="line">		while(index &lt; len )&#123;</div><div class="line">			int digit = str.charAt(index) - &apos;0&apos;;</div><div class="line">			if(digit &lt; 0 || digit &gt; 9)</div><div class="line">			break;</div><div class="line">			</div><div class="line">			//检查是否有溢出情况,要记住这种巧妙地方法</div><div class="line">			if(total &gt; Integer.MAX_VALUE / 10 || total == Integer.MAX_VALUE / 10 &amp;&amp; digit &gt; Integer.MAX_VALUE % 10)</div><div class="line">			return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;</div><div class="line">			</div><div class="line">			total = total*10 + digit;</div><div class="line">			index++;</div><div class="line">		&#125;</div><div class="line">		return total*sign;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
+<li><strong>碰到判断一个容器中是否有相同元素时，都可以考虑用HashSet来解决</strong></li>
+<li>此题中一共需要创建9个Rows、9Cols、9Cubes容器，所以要将new放进第一层for循环中</li>
+<li><strong>利用HashSet中的add(),如果含有此元素就返回false，不存在就放进容器，好用</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public boolean isValidSudoku(char[][] board)&#123;</div><div class="line">		for(int i = 0 ; i &lt; 9 ; i++)&#123;</div><div class="line">			HashSet Rows = new HashSet();</div><div class="line">			HashSet Cols = new HashSet();</div><div class="line">			HashSet Cubes = new HashSet();</div><div class="line">			</div><div class="line">			for(int j = 0 ; j &lt; 9 ; j++)&#123;</div><div class="line">				if(board[i][j] != &apos;.&apos; &amp;&amp; !Rowd.add(board[i][j]))</div><div class="line">				return false;</div><div class="line">				</div><div class="line">				if(board[j][i] != &apos;.&apos; &amp;&amp; !Cols.add(board[j][i]))</div><div class="line">				return false;</div><div class="line">				</div><div class="line">				int RowsIndex = 3*(i/3) + j/3;</div><div class="line">				int ColsIndex = 3*(i%3) + j%3;</div><div class="line">				 </div><div class="line">				if(board[RowsIndex][ColsIndex] != &apos;.&apos; &amp;&amp; !Cubes.add(board[RowsIndex][ColsIndex]))</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return true;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>小结:</p>
+<ul>
+<li>遍历3*3立方体board[3][3]</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(int i = 0 ; i &lt; 3 ; i++)&#123;</div><div class="line">	for(int j = 0 ; j &lt; 3 ; j++)&#123;</div><div class="line">		RowsIndex = 3*(i/3) + j/3;</div><div class="line">		ColsIndex = 3*(i%3) + j%3;</div><div class="line">		board[RowsIndex][ColsIndex];</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>遍历9*9立方体</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">for(int i = 0 ; i &lt; 9 ; i++)&#123;</div><div class="line">	for(int j = 0 ; j &lt; 9 ; j++)&#123;</div><div class="line">		RowsIndex = 3*(i/3) + j/3;</div><div class="line">		ColsIndex = 3*(i%3) + j%3;</div><div class="line">		board[RowsIndex][ColsIndex];  //先左右，再上下</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for(int i = 0 ; i &lt; 9 ; i++)&#123;</div><div class="line">	for(int j = 0 ; j &lt; 9 ; j++)&#123;</div><div class="line">		RowsIndex = 3*(i%3) + j%3;	</div><div class="line">		ColsIndex = 3*(i/3) + j/3;</div><div class="line">		board[RowsIndex][ColsIndex];  //先上下再左右</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>可以粗糙地认为，%比/增长得快，%放在Rows就是先将行遍历完，放在列就是先将列遍历完</strong></p>
+
       
     </div>
 
@@ -371,7 +402,7 @@
           
             <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
-            <a href="/tags/atio/" rel="tag"># atio</a>
+            <a href="/tags/Sudoku/" rel="tag"># Sudoku</a>
           
         </div>
       
@@ -380,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/04/翻译_InfluxDB_3/" rel="next" title="Benchmarking InfluxDB vs. Elasticsearch for Time-Series Data,Metrics & Management">
-                <i class="fa fa-chevron-left"></i> Benchmarking InfluxDB vs. Elasticsearch for Time-Series Data,Metrics & Management
+              <a href="/2017/02/14/Leetcode_Implement strStr()/" rel="next" title="Implement strStr()">
+                <i class="fa fa-chevron-left"></i> Implement strStr()
               </a>
             
           </div>
@@ -389,10 +420,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/08/Leetcode_Ingeter_reverse/" rel="prev" title="Reverse Integer">
-                Reverse Integer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -418,8 +445,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/Leetcode_String to Integer(atoi)/"
-           data-title="String to Integer" data-url="http://yoursite.com/2017/02/08/Leetcode_String to Integer(atoi)/">
+      <div class="ds-thread" data-thread-key="2017/02/14/Leetcode_Valid Sudoku/"
+           data-title="Valid Sudoku" data-url="http://yoursite.com/2017/02/14/Leetcode_Valid Sudoku/">
       </div>
     
   </div>
@@ -443,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/jordan.png"
@@ -534,6 +570,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
