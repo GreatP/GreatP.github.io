@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="Leetcode,Count," />
 
 
 
@@ -58,16 +58,19 @@
 
 
 
-<meta name="description" content="1234567891011121314public class Solution&amp;#123;	public int reverse(int x)&amp;#123;		int temp = 0 ;		long result = 0; //result 申请为long型，因为可能转变之后会变大		while(x != 0)&amp;#123;		//此处不能是while(x),因为x为int而不是boolean">
+<meta name="description" content="#### 
+1234567891011121314151617181920212223public class Solution&amp;#123;	public String countAndSay(int n)&amp;#123;		if(n &amp;lt; 1)		return &amp;quot;&amp;quot;;				String result = &amp;quot;1&amp;quot;;		while(n &amp;gt; 1)&amp;#12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Reverse Integer">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/Leetcode_Ingeter_reverse/index.html">
+<meta property="og:title" content="Count And Say">
+<meta property="og:url" content="http://yoursite.com/2017/02/15/Leetcode_Count And Say/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="1234567891011121314public class Solution&amp;#123;	public int reverse(int x)&amp;#123;		int temp = 0 ;		long result = 0; //result 申请为long型，因为可能转变之后会变大		while(x != 0)&amp;#123;		//此处不能是while(x),因为x为int而不是boolean">
-<meta property="og:updated_time" content="2017-02-08T12:10:05.000Z">
+<meta property="og:description" content="#### 
+1234567891011121314151617181920212223public class Solution&amp;#123;	public String countAndSay(int n)&amp;#123;		if(n &amp;lt; 1)		return &amp;quot;&amp;quot;;				String result = &amp;quot;1&amp;quot;;		while(n &amp;gt; 1)&amp;#12">
+<meta property="og:updated_time" content="2017-02-15T10:52:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Reverse Integer">
-<meta name="twitter:description" content="1234567891011121314public class Solution&amp;#123;	public int reverse(int x)&amp;#123;		int temp = 0 ;		long result = 0; //result 申请为long型，因为可能转变之后会变大		while(x != 0)&amp;#123;		//此处不能是while(x),因为x为int而不是boolean">
+<meta name="twitter:title" content="Count And Say">
+<meta name="twitter:description" content="#### 
+1234567891011121314151617181920212223public class Solution&amp;#123;	public String countAndSay(int n)&amp;#123;		if(n &amp;lt; 1)		return &amp;quot;&amp;quot;;				String result = &amp;quot;1&amp;quot;;		while(n &amp;gt; 1)&amp;#12">
 
 
 
@@ -95,13 +98,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/Leetcode_Ingeter_reverse/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/15/Leetcode_Count And Say/"/>
 
 
 
 
 
-  <title> Reverse Integer | GreatP'Blog </title>
+  <title> Count And Say | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -234,7 +237,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_Ingeter_reverse/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/Leetcode_Count And Say/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -258,7 +261,7 @@
             
             
               
-                Reverse Integer
+                Count And Say
               
             
           </h1>
@@ -273,8 +276,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:10:05+08:00">
-                2017-02-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-15T18:52:11+08:00">
+                2017-02-15
               </time>
             
 
@@ -314,8 +317,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/08/Leetcode_Ingeter_reverse/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_Ingeter_reverse/" itemprop="commentCount"></span>
+                <a href="/2017/02/15/Leetcode_Count And Say/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/15/Leetcode_Count And Say/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,8 +349,8 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public int reverse(int x)&#123;</div><div class="line">		int temp = 0 ;</div><div class="line">		long result = 0; //result 申请为long型，因为可能转变之后会变大</div><div class="line">		while(x != 0)&#123;		//此处不能是while(x),因为x为int而不是boolean</div><div class="line">		temp = x%10;</div><div class="line">		result = result*10 + temp;</div><div class="line">		x = x/10;</div><div class="line">		if(result &gt; Integer.MAX_VALUE || result &lt; Integer.MIN_VALUE)</div><div class="line">		return 0;</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+        <p>#### </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public String countAndSay(int n)&#123;</div><div class="line">		if(n &lt; 1)</div><div class="line">		return &quot;&quot;;</div><div class="line">		</div><div class="line">		String result = &quot;1&quot;;</div><div class="line">		while(n &gt; 1)&#123;</div><div class="line">			String temp = &quot;&quot;;		//每求一个新的n，都得是从头开始</div><div class="line">			char[] Array = result.toCharArray();</div><div class="line">			for(int i = 0 ; i &lt; Array.length ; i++)&#123;</div><div class="line">				int count = 1;</div><div class="line">				while(i+1 &lt; Array.length &amp;&amp; Array[i] == Array[i+1])&#123;</div><div class="line">					count++;</div><div class="line">					i++;</div><div class="line">				&#125;</div><div class="line">				temp = temp + count + Array[i];   //利用String的“+”特性</div><div class="line">				result = temp;</div><div class="line">			&#125;</div><div class="line">			n--;</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -370,7 +373,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
+          
+            <a href="/tags/Count/" rel="tag"># Count</a>
           
         </div>
       
@@ -379,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/Leetcode_String to Integer(atoi)/" rel="next" title="String to Integer">
-                <i class="fa fa-chevron-left"></i> String to Integer
+              <a href="/2017/02/14/Leetcode_Valid Sudoku/" rel="next" title="Valid Sudoku">
+                <i class="fa fa-chevron-left"></i> Valid Sudoku
               </a>
             
           </div>
@@ -388,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/08/Leetcode_Two_Sum/" rel="prev" title="Two Sum">
-                Two Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -417,8 +418,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/Leetcode_Ingeter_reverse/"
-           data-title="Reverse Integer" data-url="http://yoursite.com/2017/02/08/Leetcode_Ingeter_reverse/">
+      <div class="ds-thread" data-thread-key="2017/02/15/Leetcode_Count And Say/"
+           data-title="Count And Say" data-url="http://yoursite.com/2017/02/15/Leetcode_Count And Say/">
       </div>
     
   </div>
