@@ -235,6 +235,161 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/Leetcode_Plus One/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="GreatP">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/jordan.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="GreatP'Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/15/Leetcode_Plus One/" itemprop="url">
+                  Plus One
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-15T20:37:46+08:00">
+                2017-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/15/Leetcode_Plus One/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/15/Leetcode_Plus One/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public int[] plusOne(int[] digits)&#123;</div><div class="line">		int flag = 1;</div><div class="line">		int len = digits.length;</div><div class="line">		</div><div class="line">		for(int i = len - 1 ; i &gt;= 0 ; i--)&#123;</div><div class="line">			int sum = digits[i] + flag;</div><div class="line">			flag = sum / 10;</div><div class="line">			digits[i] = sum % 10;</div><div class="line">		&#125;</div><div class="line">		if(flag == 1)&#123;</div><div class="line">			int[] result = new int[len+1];</div><div class="line">			result[0] = 1;</div><div class="line">			System.arraycopy(digits,0,result,1,len);</div><div class="line">			return result;</div><div class="line">		&#125;</div><div class="line">		return digits;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>数字相加可以设立进位标识，进位标识用/，求本位用%</li>
+<li>两个数组复制可以用System.arraycopy(srcChar,begindex,destChar,begindex,len)</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/Leetcode_Length of Last Word/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1655,179 +1810,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/09/Leetcode_Longest Comman Prefix/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/09/Leetcode_Longest Comman Prefix/" itemprop="url">
-                  Longest Comman Prefix
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T20:17:21+08:00">
-                2017-02-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/09/Leetcode_Longest Comman Prefix/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/Leetcode_Longest Comman Prefix/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><ul>
-<li>判断是否为null</li>
-<li>将String[] strs 进行升序排列</li>
-<li>new一个StringBuilder，可以利用其append()</li>
-<li>将排序后的第一个和最后一个进行比较，从第一个字符不同循环结束，代表已经找到了最长前缀</li>
-<li>将共同前缀连接起来返回为String</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Solution&#123;</div><div class="line">	public String longestCommanPrefix(String[] strs)&#123;</div><div class="line">		if(strs.length == 0 || strs == null) //此处不能是strs == &quot;&quot;</div><div class="line">		return &quot;&quot;;</div><div class="line">		</div><div class="line">		StringBuilder result = new StringBuileder();</div><div class="line">		Arrays.sort(strs);			//利用Arrays.sort()排序</div><div class="line">		</div><div class="line">		char a[] = strs[0].toCharArray();	  //要用到数组的下标，进行转化</div><div class="line">		char b[] = strs[strs.length-1].toCharArray();</div><div class="line">		</div><div class="line">		for(int i = 0 ; i &lt; a.length ; i++)&#123;</div><div class="line">			if(b.length &gt; i &amp;&amp; a[i] == b[i])&#123;  </div><div class="line">			result.append(a[i]);</div><div class="line">			&#125;else&#123;</div><div class="line">				return result.toString();	//此处return用来终止首次出现a[i] != b[i]的情况，没有会将相同后缀返回</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		return result.toString();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Arrays类：</p>
-<ul>
-<li>此类包含用来操作数组（比如<strong>排序和搜索</strong>）的各种方法（sort()、equals()等）</li>
-<li>static void sort()<ul>
-<li>sort(char[] a)</li>
-<li>sort(char[] a , int fromIndex , int toIndex) 对指定char型数组进行升序排列，排序范围从fromIndex(包含)到toIndex(不包含) </li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class sortTest &#123;</div><div class="line">    public void sort(String[] str)&#123;</div><div class="line">     // String[] str = &#123;&quot;acc&quot; , &quot;c&quot; , &quot;cc&quot;&#125;;</div><div class="line">        Arrays.sort(str);</div><div class="line">        for(String result : str)</div><div class="line">            System.out.println(result);</div><div class="line">    &#125;</div><div class="line">    public static void main(String[] args)&#123;</div><div class="line">        sortTest s = new sortTest();</div><div class="line">        String[] strs = &#123;&quot;acc&quot; , &quot;c&quot; , &quot;cc&quot;&#125;;</div><div class="line">        s.sort(strs);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">输出：</div><div class="line">acc</div><div class="line">c</div><div class="line">cc</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1870,7 +1857,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -1888,7 +1875,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>
