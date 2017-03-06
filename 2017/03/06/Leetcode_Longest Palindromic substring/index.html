@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,sort," />
+  <meta name="keywords" content="Leetcode,Palindromic," />
 
 
 
@@ -58,16 +58,16 @@
 
 
 
-<meta name="description" content="12345678910111213141516题目：Median of Two Sorted ArraysThere are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity">
+<meta name="description" content="123456思路：1.构造一个函数entendPalindrome(String s , int left, in right)，返回一段回文2.想象String s里面每个字符中间都有一个#字符，遍历字符串，从0...2*s.length()-1，这样就不要考虑字符串个数奇偶问题3.每遍历到一个数就往左右两边扩，扩到不是回文子字符串为止4.如果i%2==1，说明i此时指着#，这是考虑的abba这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Meadian of Two Sorted Arrays">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/Leetcode_Median of Two Sorted Arrays/index.html">
+<meta property="og:title" content="Longest Palindromic substring">
+<meta property="og:url" content="http://yoursite.com/2017/03/06/Leetcode_Longest Palindromic substring/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="12345678910111213141516题目：Median of Two Sorted ArraysThere are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity">
-<meta property="og:updated_time" content="2017-02-28T14:07:16.000Z">
+<meta property="og:description" content="123456思路：1.构造一个函数entendPalindrome(String s , int left, in right)，返回一段回文2.想象String s里面每个字符中间都有一个#字符，遍历字符串，从0...2*s.length()-1，这样就不要考虑字符串个数奇偶问题3.每遍历到一个数就往左右两边扩，扩到不是回文子字符串为止4.如果i%2==1，说明i此时指着#，这是考虑的abba这">
+<meta property="og:updated_time" content="2017-03-06T14:42:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Meadian of Two Sorted Arrays">
-<meta name="twitter:description" content="12345678910111213141516题目：Median of Two Sorted ArraysThere are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity">
+<meta name="twitter:title" content="Longest Palindromic substring">
+<meta name="twitter:description" content="123456思路：1.构造一个函数entendPalindrome(String s , int left, in right)，返回一段回文2.想象String s里面每个字符中间都有一个#字符，遍历字符串，从0...2*s.length()-1，这样就不要考虑字符串个数奇偶问题3.每遍历到一个数就往左右两边扩，扩到不是回文子字符串为止4.如果i%2==1，说明i此时指着#，这是考虑的abba这">
 
 
 
@@ -95,13 +95,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/Leetcode_Median of Two Sorted Arrays/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/06/Leetcode_Longest Palindromic substring/"/>
 
 
 
 
 
-  <title> Meadian of Two Sorted Arrays | GreatP'Blog </title>
+  <title> Longest Palindromic substring | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -234,7 +234,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/Leetcode_Median of Two Sorted Arrays/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/06/Leetcode_Longest Palindromic substring/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -258,7 +258,7 @@
             
             
               
-                Meadian of Two Sorted Arrays
+                Longest Palindromic substring
               
             
           </h1>
@@ -273,8 +273,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-28T22:07:16+08:00">
-                2017-02-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-06T22:42:14+08:00">
+                2017-03-06
               </time>
             
 
@@ -303,6 +303,17 @@
 
                 
                 
+                  . 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -314,8 +325,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/28/Leetcode_Median of Two Sorted Arrays/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/Leetcode_Median of Two Sorted Arrays/" itemprop="commentCount"></span>
+                <a href="/2017/03/06/Leetcode_Longest Palindromic substring/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/Leetcode_Longest Palindromic substring/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,12 +357,38 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">题目：</div><div class="line">Median of Two Sorted Arrays</div><div class="line">There are two sorted arrays nums1 and nums2 of size m and n respectively.</div><div class="line"></div><div class="line">Find the median of the two sorted arrays. <span class="function">The overall run time complexity should be <span class="title">O</span><span class="params">(log (m+n)</span>).</span></div><div class="line"></div><div class="line">Example 1:</div><div class="line">nums1 = [<span class="number">1</span>, <span class="number">3</span>]</div><div class="line">nums2 = [<span class="number">2</span>]</div><div class="line"></div><div class="line">The median is <span class="number">2.0</span></div><div class="line">Example <span class="number">2</span>:</div><div class="line">nums1 = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line">nums2 = [<span class="number">3</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line"><span class="function">The median <span class="title">is</span> <span class="params">(<span class="number">2</span> + <span class="number">3</span>)</span>/2 </span>= <span class="number">2.5</span></div></pre></td></tr></table></figure>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>将两个排序数组整个到一个数组，并进行排序</li>
-<li>在排序后的数组中找出中位数</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] nums1,<span class="keyword">int</span>[] nums2)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len1 = nums1.length;</div><div class="line">    <span class="keyword">int</span> len2 = nums2.length;</div><div class="line">    <span class="keyword">int</span>[] result = <span class="keyword">new</span> result[len1+len2];</div><div class="line">    System.arraycopy(nums1,<span class="number">0</span>,result,<span class="number">0</span>,len1); <span class="comment">//数组迁移很好用</span></div><div class="line">    System.arraycopy(nums2,<span class="number">0</span>,result,len1,len2);</div><div class="line">    Arrays.sort(result); <span class="comment">//很好用的排序函数，对数组\对象都可以排序</span></div><div class="line">    <span class="keyword">int</span> temp = (len1 + len2) % <span class="number">2</span>;</div><div class="line">    <span class="keyword">int</span> count = (len1 + len2) / <span class="number">2</span>;</div><div class="line">    <span class="keyword">double</span> median = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(temp == <span class="number">0</span>)&#123;</div><div class="line">      median = (<span class="keyword">double</span>)(result[count - <span class="number">1</span>] + result[count])/<span class="number">2</span>;	<span class="comment">//需要将右边转型为double，否则结果都只保留整数，需要注意函数最后返回什么类型的值</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">      median = (<span class="keyword">double</span>)result[count];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> median;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">思路：</div><div class="line">1.构造一个函数entendPalindrome(String s , int left, in right)，返回一段回文</div><div class="line">2.想象String s里面每个字符中间都有一个#字符，遍历字符串，从0...2*s.length()-1，这样就不要考虑字符串个数奇偶问题</div><div class="line">3.每遍历到一个数就往左右两边扩，扩到不是回文子字符串为止</div><div class="line">4.如果i%2==1，说明i此时指着#，这是考虑的abba这种情况，需要将right往前挪一位</div><div class="line">5.如果i%2==0，说明是aba这种情况，left和right指着同一个字符</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>#</th>
+<th>b</th>
+<th>#</th>
+<th>c</th>
+<th>#</th>
+<th>b</th>
+<th>#</th>
+<th>d</th>
+<th style="text-align:left">#</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td style="text-align:left">9</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(s == <span class="string">""</span> || s == <span class="keyword">null</span>)</div><div class="line">      <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> right = <span class="number">0</span>;</div><div class="line">    String result = <span class="string">""</span>;</div><div class="line">    <span class="keyword">int</span> maxlen = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; <span class="number">2</span>*s.length()-<span class="number">1</span>; i++)&#123;</div><div class="line">      left = i/<span class="number">2</span>;</div><div class="line">      right = i/<span class="number">2</span>;</div><div class="line">      <span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">1</span>)</div><div class="line">        right++;</div><div class="line">     String res = extendPalindrome(s,left,right);</div><div class="line">      <span class="keyword">if</span>(maxlen &lt; res.length())&#123;</div><div class="line">        maxlen = res.length();</div><div class="line">        result = res;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">private</span> String <span class="title">extendPalindrome</span><span class="params">(String s , <span class="keyword">int</span> left , <span class="keyword">int</span> right)</span></span>&#123;</div><div class="line">      <span class="keyword">while</span>(left &gt;= <span class="number">0</span> &amp;&amp; right &lt; s.length() &amp;&amp; s.charAt(left) == s.charAt(right))&#123;</div><div class="line">        left--;</div><div class="line">        right++;</div><div class="line">      &#125;</div><div class="line">     <span class="keyword">return</span> s.substring(left+<span class="number">1</span>,right);</div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -377,7 +414,7 @@
           
             <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
-            <a href="/tags/sort/" rel="tag"># sort</a>
+            <a href="/tags/Palindromic/" rel="tag"># Palindromic</a>
           
         </div>
       
@@ -386,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/Leetcode_Longest Substring Without Repeating Characters/" rel="next" title="Longest Substring Without Repeating Characters">
-                <i class="fa fa-chevron-left"></i> Longest Substring Without Repeating Characters
+              <a href="/2017/03/06/Leetcode_3Sum/" rel="next" title="3Sum">
+                <i class="fa fa-chevron-left"></i> 3Sum
               </a>
             
           </div>
@@ -395,10 +432,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/01/Leetcode_Contains Most Water/" rel="prev" title="Contains Most Water">
-                Contains Most Water <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -424,8 +457,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/28/Leetcode_Median of Two Sorted Arrays/"
-           data-title="Meadian of Two Sorted Arrays" data-url="http://yoursite.com/2017/02/28/Leetcode_Median of Two Sorted Arrays/">
+      <div class="ds-thread" data-thread-key="2017/03/06/Leetcode_Longest Palindromic substring/"
+           data-title="Longest Palindromic substring" data-url="http://yoursite.com/2017/03/06/Leetcode_Longest Palindromic substring/">
       </div>
     
   </div>
@@ -449,17 +482,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/jordan.png"
@@ -549,22 +573,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
