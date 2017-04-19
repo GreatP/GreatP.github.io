@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,Count," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -58,19 +58,40 @@
 
 
 
-<meta name="description" content="#### 
-1234567891011121314151617181920212223public class Solution&amp;#123;	public String countAndSay(int n)&amp;#123;		if(n &amp;lt; 1)		return &amp;quot;&amp;quot;;				String result = &amp;quot;1&amp;quot;;		while(n &amp;gt; 1)&amp;#12">
+<meta name="description" content="题目描述
+在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+解题思路
+在不知道思路的情况下，先找个具体的例子找规律
+1    2    8    9
+2    4    9    12
+4    7    10    13
+6    8    11    15
+比如要从上面这个二维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Count And Say">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/Leetcode_Count And Say/index.html">
+<meta property="og:title" content="二维数组查找-面试题3">
+<meta property="og:url" content="http://yoursite.com/2017/04/19/二维数组中查找/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="#### 
-1234567891011121314151617181920212223public class Solution&amp;#123;	public String countAndSay(int n)&amp;#123;		if(n &amp;lt; 1)		return &amp;quot;&amp;quot;;				String result = &amp;quot;1&amp;quot;;		while(n &amp;gt; 1)&amp;#12">
-<meta property="og:updated_time" content="2017-02-15T10:52:11.000Z">
+<meta property="og:description" content="题目描述
+在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+解题思路
+在不知道思路的情况下，先找个具体的例子找规律
+1    2    8    9
+2    4    9    12
+4    7    10    13
+6    8    11    15
+比如要从上面这个二维">
+<meta property="og:updated_time" content="2017-04-19T09:21:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Count And Say">
-<meta name="twitter:description" content="#### 
-1234567891011121314151617181920212223public class Solution&amp;#123;	public String countAndSay(int n)&amp;#123;		if(n &amp;lt; 1)		return &amp;quot;&amp;quot;;				String result = &amp;quot;1&amp;quot;;		while(n &amp;gt; 1)&amp;#12">
+<meta name="twitter:title" content="二维数组查找-面试题3">
+<meta name="twitter:description" content="题目描述
+在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+解题思路
+在不知道思路的情况下，先找个具体的例子找规律
+1    2    8    9
+2    4    9    12
+4    7    10    13
+6    8    11    15
+比如要从上面这个二维">
 
 
 
@@ -98,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/15/Leetcode_Count And Say/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/19/二维数组中查找/"/>
 
 
 
 
 
-  <title> Count And Say | GreatP'Blog </title>
+  <title> 二维数组查找-面试题3 | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -237,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/Leetcode_Count And Say/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/二维数组中查找/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -261,7 +282,7 @@
             
             
               
-                Count And Say
+                二维数组查找-面试题3
               
             
           </h1>
@@ -276,8 +297,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-15T18:52:11+08:00">
-                2017-02-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T17:21:05+08:00">
+                2017-04-19
               </time>
             
 
@@ -299,8 +320,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
+                  <a href="/categories/剑指offer/" itemprop="url" rel="index">
+                    <span itemprop="name">剑指offer</span>
                   </a>
                 </span>
 
@@ -317,8 +338,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/15/Leetcode_Count And Say/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/15/Leetcode_Count And Say/" itemprop="commentCount"></span>
+                <a href="/2017/04/19/二维数组中查找/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/19/二维数组中查找/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -349,8 +370,25 @@
       
 
       
-        <p>#### </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public String countAndSay(int n)&#123;</div><div class="line">		if(n &lt; 1)</div><div class="line">		return &quot;&quot;;</div><div class="line">		</div><div class="line">		String result = &quot;1&quot;;</div><div class="line">		while(n &gt; 1)&#123;</div><div class="line">			String temp = &quot;&quot;;		//每求一个新的n，都得是从头开始</div><div class="line">			char[] Array = result.toCharArray();</div><div class="line">			for(int i = 0 ; i &lt; Array.length ; i++)&#123;</div><div class="line">				int count = 1;</div><div class="line">				while(i+1 &lt; Array.length &amp;&amp; Array[i] == Array[i+1])&#123;</div><div class="line">					count++;</div><div class="line">					i++;</div><div class="line">				&#125;</div><div class="line">				temp = temp + count + Array[i];   //利用String的“+”特性</div><div class="line">				result = temp;</div><div class="line">			&#125;</div><div class="line">			n--;</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p><strong>题目描述</strong></p>
+<p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
+<p><strong>解题思路</strong></p>
+<p>在不知道思路的情况下，先找个具体的例子找规律</p>
+<p>1    2    8    9</p>
+<p>2    4    9    12</p>
+<p>4    7    10    13</p>
+<p>6    8    11    15</p>
+<p>比如要从上面这个二维数组里找到target这个数字</p>
+<ul>
+<li>先选取右上角9(或者左下角的6)</li>
+<li>如果target比9大，第一行就可以不考虑了，往下移一位row++</li>
+<li>如果target比9小，最后一列就不用用考虑了，往左移一位col–</li>
+<li>如果target等于9，则返回true</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二维数组形式行长度表示方法：array[0].length(列数)</span></div><div class="line"><span class="comment">//二维数组长度array.length(行数)</span></div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> target,<span class="keyword">int</span> array[][])</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> row = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> col = array[<span class="number">0</span>].length - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(row &lt; array.length &amp;&amp; col &gt;= <span class="number">0</span>)&#123;</div><div class="line">      <span class="keyword">if</span>(target == array[row][col])&#123;	<span class="comment">//找到了target，返回true</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(target &gt; array[row][col])&#123;	<span class="comment">//排除掉第row行</span></div><div class="line">        row++;</div><div class="line">      &#125;<span class="keyword">else</span>		<span class="comment">//排除掉第col列</span></div><div class="line">      	col--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;	<span class="comment">//说明二维数组中不存在target</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>为什么要选取左下角或者右下角数字开始？因为这两个数变大只有一个方向，变小也只有一个方向。而左上角两个方向都是变大，右下角两个方向都是变小，这样导致遍历有两个方向</strong></p>
+
       
     </div>
 
@@ -371,21 +409,13 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
-          
-            <a href="/tags/Count/" rel="tag"># Count</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/14/Leetcode_Valid Sudoku/" rel="next" title="Valid Sudoku">
-                <i class="fa fa-chevron-left"></i> Valid Sudoku
+              <a href="/2017/03/23/Leetcode35_Search Insert Position/" rel="next" title="Leetcode35 Search Insert Position">
+                <i class="fa fa-chevron-left"></i> Leetcode35 Search Insert Position
               </a>
             
           </div>
@@ -393,10 +423,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/15/Leetcode_Length of Last Word/" rel="prev" title="Length of Last Word">
-                Length of Last Word <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -422,8 +448,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/15/Leetcode_Count And Say/"
-           data-title="Count And Say" data-url="http://yoursite.com/2017/02/15/Leetcode_Count And Say/">
+      <div class="ds-thread" data-thread-key="2017/04/19/二维数组中查找/"
+           data-title="二维数组查找-面试题3" data-url="http://yoursite.com/2017/04/19/二维数组中查找/">
       </div>
     
   </div>
