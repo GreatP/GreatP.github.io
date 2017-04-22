@@ -162,7 +162,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -172,7 +172,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Kategorien
+            Categories
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            Über
+            About
           </a>
         </li>
       
@@ -225,6 +225,172 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/14/Leetcode_Valid Sudoku/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="GreatP">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/jordan.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="GreatP'Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/14/Leetcode_Valid Sudoku/" itemprop="url">
+                  Valid Sudoku
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-14T20:45:36+08:00">
+                2017-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/14/Leetcode_Valid Sudoku/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/14/Leetcode_Valid Sudoku/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
+<li><strong>碰到判断一个容器中是否有相同元素时，都可以考虑用HashSet来解决</strong></li>
+<li>此题中一共需要创建9个Rows、9Cols、9Cubes容器，所以要将new放进第一层for循环中</li>
+<li><strong>利用HashSet中的add(),如果含有此元素就返回false，不存在就放进容器，好用</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public boolean isValidSudoku(char[][] board)&#123;</div><div class="line">		for(int i = 0 ; i &lt; 9 ; i++)&#123;</div><div class="line">			HashSet Rows = new HashSet();</div><div class="line">			HashSet Cols = new HashSet();</div><div class="line">			HashSet Cubes = new HashSet();</div><div class="line">			</div><div class="line">			for(int j = 0 ; j &lt; 9 ; j++)&#123;</div><div class="line">				if(board[i][j] != &apos;.&apos; &amp;&amp; !Rowd.add(board[i][j]))</div><div class="line">				return false;</div><div class="line">				</div><div class="line">				if(board[j][i] != &apos;.&apos; &amp;&amp; !Cols.add(board[j][i]))</div><div class="line">				return false;</div><div class="line">				</div><div class="line">				int RowsIndex = 3*(i/3) + j/3;</div><div class="line">				int ColsIndex = 3*(i%3) + j%3;</div><div class="line">				 </div><div class="line">				if(board[RowsIndex][ColsIndex] != &apos;.&apos; &amp;&amp; !Cubes.add(board[RowsIndex][ColsIndex]))</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return true;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>小结:</p>
+<ul>
+<li>遍历3*3立方体board[3][3]</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(int i = 0 ; i &lt; 3 ; i++)&#123;</div><div class="line">	for(int j = 0 ; j &lt; 3 ; j++)&#123;</div><div class="line">		RowsIndex = 3*(i/3) + j/3;</div><div class="line">		ColsIndex = 3*(i%3) + j%3;</div><div class="line">		board[RowsIndex][ColsIndex];</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>遍历9*9立方体</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">for(int i = 0 ; i &lt; 9 ; i++)&#123;</div><div class="line">	for(int j = 0 ; j &lt; 9 ; j++)&#123;</div><div class="line">		RowsIndex = 3*(i/3) + j/3;</div><div class="line">		ColsIndex = 3*(i%3) + j%3;</div><div class="line">		board[RowsIndex][ColsIndex];  //先左右，再上下</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for(int i = 0 ; i &lt; 9 ; i++)&#123;</div><div class="line">	for(int j = 0 ; j &lt; 9 ; j++)&#123;</div><div class="line">		RowsIndex = 3*(i%3) + j%3;	</div><div class="line">		ColsIndex = 3*(i/3) + j/3;</div><div class="line">		board[RowsIndex][ColsIndex];  //先上下再左右</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>可以粗糙地认为，%比/增长得快，%放在Rows就是先将行遍历完，放在列就是先将列遍历完</strong></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -275,7 +441,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-14T19:29:15+08:00">
                 2017-02-14
@@ -296,7 +462,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -430,7 +596,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T21:27:44+08:00">
                 2017-02-13
@@ -451,7 +617,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -583,7 +749,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T20:54:34+08:00">
                 2017-02-13
@@ -604,7 +770,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -737,7 +903,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T20:07:31+08:00">
                 2017-02-13
@@ -758,7 +924,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -769,7 +935,7 @@
 
                 
                 
-                  . 
+                  , 
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -904,7 +1070,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T19:20:28+08:00">
                 2017-02-13
@@ -925,7 +1091,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -936,7 +1102,7 @@
 
                 
                 
-                  . 
+                  , 
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1072,7 +1238,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T11:05:59+08:00">
                 2017-02-10
@@ -1093,7 +1259,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1104,7 +1270,7 @@
 
                 
                 
-                  . 
+                  , 
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1237,7 +1403,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T20:17:21+08:00">
                 2017-02-09
@@ -1258,7 +1424,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1405,7 +1571,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T16:22:35+08:00">
                 2017-02-09
@@ -1426,7 +1592,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1573,7 +1739,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T10:11:27+08:00">
                 2017-02-09
@@ -1594,7 +1760,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1605,7 +1771,7 @@
 
                 
                 
-                  . 
+                  , 
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1741,161 +1907,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/Leetcode_Palindrome Number/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/08/Leetcode_Palindrome Number/" itemprop="url">
-                  Palindrome Number
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T20:36:33+08:00">
-                2017-02-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/08/Leetcode_Palindrome Number/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/Leetcode_Palindrome Number/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public boolean isPalindrome(int x)&#123;</div><div class="line">		if(x &lt; 0)</div><div class="line">		return false;</div><div class="line">		</div><div class="line">		int result = 0 ;</div><div class="line">		int temp = x ;</div><div class="line">		</div><div class="line">		while(temp != 0)&#123;</div><div class="line">			result = result * 10 + temp%10;</div><div class="line">			temp = temp/10;</div><div class="line">		&#125;</div><div class="line">		return x == result ? true : false;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
-<li>小于0的数不考虑</li>
-<li>将int x 反转为新的result，如果和原来的数相等，就是回文</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">while(x &gt; temp)&#123;</div><div class="line">// 	    result = result * 10 + temp%10;</div><div class="line">// 	    temp = temp/10;</div><div class="line">// 	&#125;</div><div class="line">// 	return (x == temp || temp == x/10)</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1943,8 +1954,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -1953,7 +1964,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">categories</span>
               </a>
             </div>
           
@@ -1962,7 +1973,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
