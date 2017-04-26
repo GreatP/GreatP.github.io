@@ -235,6 +235,157 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/Leetcode_Count And Say/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="GreatP">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/jordan.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="GreatP'Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/15/Leetcode_Count And Say/" itemprop="url">
+                  Count And Say
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-15T18:52:11+08:00">
+                2017-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/15/Leetcode_Count And Say/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/15/Leetcode_Count And Say/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#### </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public String countAndSay(int n)&#123;</div><div class="line">		if(n &lt; 1)</div><div class="line">		return &quot;&quot;;</div><div class="line">		</div><div class="line">		String result = &quot;1&quot;;</div><div class="line">		while(n &gt; 1)&#123;</div><div class="line">			String temp = &quot;&quot;;		//每求一个新的n，都得是从头开始</div><div class="line">			char[] Array = result.toCharArray();</div><div class="line">			for(int i = 0 ; i &lt; Array.length ; i++)&#123;</div><div class="line">				int count = 1;</div><div class="line">				while(i+1 &lt; Array.length &amp;&amp; Array[i] == Array[i+1])&#123;</div><div class="line">					count++;</div><div class="line">					i++;</div><div class="line">				&#125;</div><div class="line">				temp = temp + count + Array[i];   //利用String的“+”特性</div><div class="line">				result = temp;</div><div class="line">			&#125;</div><div class="line">			n--;</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/14/Leetcode_Valid Sudoku/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1690,223 +1841,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/09/翻译_InfluxDB_04/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/09/翻译_InfluxDB_04/" itemprop="url">
-                  Benchmarking InfluxDB vs. OpenTSDB for Time-Series Data,Metrics & Management
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T10:11:27+08:00">
-                2017-02-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Translate/" itemprop="url" rel="index">
-                    <span itemprop="name">Translate</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Translate/时间序列数据/" itemprop="url" rel="index">
-                    <span itemprop="name">时间序列数据</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/09/翻译_InfluxDB_04/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/翻译_InfluxDB_04/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Author: Todd Persen  –VP of Engineering</strong></p>
-<p><strong>Author: Robert Winslow  –External Contributor</strong></p>
-<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>在这篇技术论文中，我们将就普通时间序列数据工作负载，对比InfluxDB和OpenTSDB的性能和特征，尤其是考察数据消化率、数据在磁盘的压缩、数据查询性能。我们还将考察特征对比以及每个工具构建完整的时间序列解决方案需要的时间。</p>
-<p>这个基准测试的目标是创建一个能够反映InfluxDB和OpenTSDB最新的发展方面的一致、最新的对比，我们将会周期性地重新跑这个基准测试并在文档中更新我们的最新发现。这个基准测试的所有源代码在<a href="https://github.com/influxdata/influxdb-comparisons" target="_blank" rel="external">Github</a>中可以得到，如果您有任何问题、意见、或者建议可以随时打开问题或者对该存储库的请求。</p>
-<h4 id="关于InfluxDB"><a href="#关于InfluxDB" class="headerlink" title="关于InfluxDB"></a>关于InfluxDB</h4><p>测试的InfluxDB版本:v1.0.0</p>
-<p>InfluxDB是用Go语言写的开源时间序列数据库，在它的内核是一个定制的叫做<a href="https://www.influxdata.com/new-storage-engine-time-structured-merge-tree/" target="_blank" rel="external">时间结构合并树</a>，它是为时间序列数据优化的。被定制的叫做InfluxQL的类查询语言控制着。InfluxDB对数学和统计的函数提供开箱即用的功能，这种开箱即用的功能对定制监控、指标收集、实时分析、和物联网、传感数据工作负载来说是简直是完美的。</p>
-<h4 id="关于OpenTSDB"><a href="#关于OpenTSDB" class="headerlink" title="关于OpenTSDB"></a>关于OpenTSDB</h4><p>测试的OpenTSDB版本：v2.30rc2<em> (</em>包含定制批量)</p>
-<p>OpenTSDB是一个用Java写的可扩展的、分布式的时间序列数据库，它构建在HBase之上，最初由Benoit Sigoure于2010年开始创作，并在LGPL下开源。和InfluxDB相反，OpenTSDB不是一个独立的时间序列数据库，相反，它依赖HBase作为它的存储层，因此OpenTSDB时间序列守护进程（OpenTSDB中的TSD）有效地提供了查询引擎的功能，实例之间没有共享状态。这可能需要大量额外的操作成本和开销来在生产部署中进行管理</p>
-<h4 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h4><p>在我们一头扎进基准测试里面之前，重要的是要注意，直接比较InfluxDB和OpenTSDB需要对OpenTSDB有一点解释，因为OpenTSDB需要HBase作为它的存储层，不像InfluxDB，它不能作为一个独立的系统进行操作。通常，运行HBase需要大量的操作开销，它本身包含了所有需要的子系统，一直到本文结束，我们将会更细致地讨论这些细节。</p>
-<p>在构建具有代表性的基准套件时，我们确定了恒量时间序列特征的评估指标，我们将在下面更详细地描述，我们研究了三个方面的性能:</p>
-<ul>
-<li>数据消化性能 - 以每秒测量的数据计量</li>
-<li>需要的磁盘空间 - 以GB计量</li>
-<li>平均查询响应时间 - 以ms计量</li>
-</ul>
-<blockquote>
-<p>结论: 在所有三个测试中，InfluxDB表现都明显优于OpenTSDB</p>
-</blockquote>
-<p>需要指出的是，使用OpenTSDB需要大量的设置、配置、调优，以实现最佳的写入和查询性能，我们咨询了所有可用的OpenTSDB文档，并作出选择以最大化OpenTSDB的性能，但这些选择可能会随着你的实际用例和数据集而有所不同</p>
-<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p>对于这个基准测试，我们专注于模拟一个常规DevOps监控和指标用例的数据集，其中一组服务器周期性以固定的时间间隔地报告系统和应用程序的指标。我们每10s对9个子系统（CPU、memory、disk、disk I/O、kernel、network、Redis、postgreSQL、Ngnix）取样100条数据。为了关键比较,我们考察代表了过去24小时、1000台服务器产生的数据集，这代表了相对中等集群规模。我们提供不同的颜色对这些比较进行区分，包括持续时间和服务器数量。<br><img src="http://p1.bpimg.com/567571/d76a61f92708ba0c.png" alt=""><br>这仅仅是整个基准测试套件的子集，但是是一个有代表性的例子。在这篇论文的结尾，我们将会讨论其他的变量和它们对性能的影响。如果对更多细节感兴趣，可以在<a href="https://github.com/influxdata/influxdb-comparisons" target="_blank" rel="external">Github</a>上了解更多。</p>
-<h4 id="写性能"><a href="#写性能" class="headerlink" title="写性能"></a>写性能</h4><p>为了测试写性能，我们用4个worker并发加载这4个小时的数据集（为了匹配服务器的内核数）。另外，因为我们的目标OpenTSDB设置总共需要6个服务器（4个HBase nodes+2个OpenTSDB守护进程，不包括额外的Zookeeper），对比之下， InfluxDB只需要一个节点。我们在每个服务器的基础上研究了写性能。此外，我们在HBase中使用副本数为1，以便与InfluxDB的单个节点进行公平的比较。</p>
-<p>我们发现OpenTSDB的平均吞吐量是35,648条数据/每秒，相同的数据集以179,814条数据/每秒加载到InfluxDB中，也就是说，考察每台服务器的吞吐率，InfluxDB的速度大概是OpenTSDB的5倍。<br><img src="http://i1.piimg.com/567571/e8ff41dd64effdf1.png" alt=""><br>在我们的测试中，我们发现连个数据库的较长时间数据集（即48小时、72小时、96小时）的写吞吐保持相对一致，对于被设计来处理时间序列的系统，这是我们期望看到的结果</p>
-<blockquote>
-<p>结论：当评估数据性能性能，InfluxDB优于OpenTSDB5倍</p>
-</blockquote>
-<h4 id="需要磁盘空间"><a href="#需要磁盘空间" class="headerlink" title="需要磁盘空间"></a>需要磁盘空间</h4><p>对于上面列出的相同4小时的数据集，我们研究了写入所有值之后使用的磁盘空间量，允许每个数据库进行本地压缩。我们发现对于OpenTSDB需要5.8GB的存储空间，而InfluxDB只需要351MB的存储空间，也就是说InfluxDB的压缩性能是OpenTSDB的16.5倍。这个结果说明每条数据在InfluxDB中需要2.44bytes的存储空间，而在OpenTSDB中需要40.3bytes<br><img src="http://i1.piimg.com/567571/e8a4a8f92272f2dc.png" alt=""></p>
-<blockquote>
-<p>结论：对于磁盘压缩性能，InfluxDB优于OpenTSDB16.5倍</p>
-</blockquote>
-<h4 id="查询性能"><a href="#查询性能" class="headerlink" title="查询性能"></a>查询性能</h4><p>为了测试查询性能，我们选择一个查询语句，将8个服务器过去随机一个小时的数据进行聚合，按1分钟间隔进行分组，潜在地表示可视化的多条线（一个常见的DevOps监视和指标功能）。查询多个单独的时间序列对于许多物联网用例也是常见的。</p>
-<p>我们还增加并发性来观察这些查询，从1worker开始，直到worker增加到32为止，这让我们很好的了解每个数据库在工作负载增加的时候的表现，这能代表在生产部署中可能发现的情况。OpenTSDB worker以循环工作方式分配给每个OpenTSDB节点。</p>
-<p>就像你在下面的表格中看到的，在所有情况下，InfluxDB的性能优于OpenTSDB，在并发级别上，InfluxDB的性能始终3.65倍到4.0倍于OpenTSDB性能<br><img src="http://p1.bpimg.com/567571/2ad509cab599c24e.png" alt=""><br>当我们考虑到OpenTSDB架构时，这些结果并不奇怪，因为对OpenTSDB的每个查询必须从HBase集群中检索数据，然后再处理它进行响应，将总存在额外的延迟组件，这似乎导致查询吞吐量降低约四分之一</p>
-<blockquote>
-<p>结论：InfluxDB的查询性能是OpenTSDB查询性能的大约4倍</p>
-</blockquote>
-<h4 id="用户经验对比"><a href="#用户经验对比" class="headerlink" title="用户经验对比"></a>用户经验对比</h4><p>OpenTSDB是一个时间序列数据存储，使用APache HBase作为其存储后端，OpenTSDB旨在从计算集群中获取服务遥测数据，并使用gnuplot在Web GUI中生成可视化，它还有一个查询API，运行OpenTSDB需要部署下面的组件，这通常位于单独服务器上：</p>
-<ul>
-<li>OpenTSDB 时间序列程序（TSDs）</li>
-<li>Apache HBase Master nodes</li>
-<li>Apache HBase Data nodes</li>
-<li>Apache Zookeeper 程序（为了协调HBase 节点）</li>
-<li>Apache Hadoop HDFS </li>
-<li>Apache ZoopKeeper程序（为协调Hadoop 节点）（？）<br>这六个组件中的每一个都需要在生产中运行OpenTSDB，OpenTSDB必须完全了解OpenTSDB和HBase内部结构才能有效的使用OpenTSDB（HDFS完全由HBase抽象，但系统管理员还必须了解如何在生产环境中使用HDFS），典型情况下，OpenTSDB的用户处于另一个团队管理HBase和HDFS部署，InfluxDB也是一个专用的时间序列数据库，但是，它是自包含的，并且不需要在生产中部署支持服务</li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>在这篇基准测试论文中，我们从三个方面考察InfluxDB和OpenTSDB的性能：</p>
-<ul>
-<li>数据消化能力</li>
-<li>需要磁盘空间</li>
-<li>平均查询响应时间</li>
-</ul>
-<p>基准测试结果是InfluxDB在这三个方面都胜过OpenTSDB，尤其是:</p>
-<ul>
-<li>数据消化方面：InfluxDB优于OpenTSDB5倍</li>
-<li>数据压缩方面：InfluxDB优于OpenTSDB16.5倍</li>
-<li>数据查询方面：InfluxDB优于OpenTSDB4倍</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1954,7 +1888,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
