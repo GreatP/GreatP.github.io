@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,strStr()," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -58,28 +58,40 @@
 
 
 
-<meta name="description" content="思路
-利用String.substring(int beginIndex , int endIndex)，endIndex所指的字符不包括（这貌似是比较通用的规律）
-排除边界（有一个String为 “” ，或者两个String均为 “”）情况
+<meta name="description" content="题目描述
+我们可以用21的小矩形横着或者竖着去覆盖更大的矩形。请问用n个21的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+思路解析
 
-123456789101112131415161718public class Solution&amp;#123;	public int strStr(Stri">
+先把2*8的覆盖方法记为f(8)
+竖着放还有f(7)
+横着放f(6)
+
+12345678910111213141516171819public class Solution &amp;#123;    public int RectCover(int targ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Implement strStr()">
-<meta property="og:url" content="http://yoursite.com/2017/02/14/Leetcode_Implement strStr()/index.html">
+<meta property="og:title" content="矩形覆盖">
+<meta property="og:url" content="http://yoursite.com/2017/04/26/面试题9.3.矩形覆盖/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
-<meta property="og:description" content="思路
-利用String.substring(int beginIndex , int endIndex)，endIndex所指的字符不包括（这貌似是比较通用的规律）
-排除边界（有一个String为 “” ，或者两个String均为 “”）情况
+<meta property="og:description" content="题目描述
+我们可以用21的小矩形横着或者竖着去覆盖更大的矩形。请问用n个21的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+思路解析
 
-123456789101112131415161718public class Solution&amp;#123;	public int strStr(Stri">
-<meta property="og:updated_time" content="2017-02-14T11:29:15.000Z">
+先把2*8的覆盖方法记为f(8)
+竖着放还有f(7)
+横着放f(6)
+
+12345678910111213141516171819public class Solution &amp;#123;    public int RectCover(int targ">
+<meta property="og:updated_time" content="2017-04-26T09:06:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Implement strStr()">
-<meta name="twitter:description" content="思路
-利用String.substring(int beginIndex , int endIndex)，endIndex所指的字符不包括（这貌似是比较通用的规律）
-排除边界（有一个String为 “” ，或者两个String均为 “”）情况
+<meta name="twitter:title" content="矩形覆盖">
+<meta name="twitter:description" content="题目描述
+我们可以用21的小矩形横着或者竖着去覆盖更大的矩形。请问用n个21的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+思路解析
 
-123456789101112131415161718public class Solution&amp;#123;	public int strStr(Stri">
+先把2*8的覆盖方法记为f(8)
+竖着放还有f(7)
+横着放f(6)
+
+12345678910111213141516171819public class Solution &amp;#123;    public int RectCover(int targ">
 
 
 
@@ -107,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/14/Leetcode_Implement strStr()/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/26/面试题9.3.矩形覆盖/"/>
 
 
 
 
 
-  <title> Implement strStr() | GreatP'Blog </title>
+  <title> 矩形覆盖 | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -246,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/14/Leetcode_Implement strStr()/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/面试题9.3.矩形覆盖/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -270,7 +282,7 @@
             
             
               
-                Implement strStr()
+                矩形覆盖
               
             
           </h1>
@@ -285,8 +297,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-14T19:29:15+08:00">
-                2017-02-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-26T17:06:15+08:00">
+                2017-04-26
               </time>
             
 
@@ -308,8 +320,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
+                  <a href="/categories/剑指offer/" itemprop="url" rel="index">
+                    <span itemprop="name">剑指offer</span>
                   </a>
                 </span>
 
@@ -326,8 +338,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/14/Leetcode_Implement strStr()/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/14/Leetcode_Implement strStr()/" itemprop="commentCount"></span>
+                <a href="/2017/04/26/面试题9.3.矩形覆盖/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/26/面试题9.3.矩形覆盖/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -358,11 +370,15 @@
       
 
       
-        <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul>
-<li>利用String.substring(int beginIndex , int endIndex)，endIndex所指的字符不包括（这貌似是比较通用的规律）</li>
-<li>排除边界（有一个String为 “” ，或者两个String均为 “”）情况</li>
+        <p><strong>题目描述</strong></p>
+<p>我们可以用2<em>1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2</em>1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？</p>
+<p><strong>思路解析</strong></p>
+<ul>
+<li>先把2*8的覆盖方法记为f(8)</li>
+<li>竖着放还有f(7)</li>
+<li>横着放f(6)</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">public class Solution&#123;</div><div class="line">	public int strStr(String haystack , String needle)&#123;</div><div class="line">		int l1 = haystack.length();</div><div class="line">		int l2 = needle.length();</div><div class="line">		</div><div class="line">		if(l1 == 0 &amp;&amp; l2 == 0)</div><div class="line">		return -1;</div><div class="line">		</div><div class="line">		int count = 0;</div><div class="line">		String str = &quot;&quot;;</div><div class="line">		for(; count &lt; l1 - l2 + 1 ; count++)&#123;</div><div class="line">			str = haystack.substring(count , count + l2);</div><div class="line">			if(str.equals(needle))</div><div class="line">			break;</div><div class="line">		&#125;</div><div class="line">		return str.equals(needle) ? count : -1;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">RectCover</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span>(target == <span class="number">1</span>)</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(target == <span class="number">2</span>)</div><div class="line">            <span class="keyword">return</span> <span class="number">2</span>;</div><div class="line">        </div><div class="line">        <span class="keyword">int</span> firstCover = <span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> secondCover = <span class="number">2</span>;</div><div class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= target; i++)&#123;</div><div class="line">            result = firstCover + secondCover;</div><div class="line">            firstCover = secondCover;</div><div class="line">            secondCover = result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -384,21 +400,13 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
-          
-            <a href="/tags/strStr/" rel="tag"># strStr()</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/13/Leetcode_Remove Element/" rel="next" title="Remove Element">
-                <i class="fa fa-chevron-left"></i> Remove Element
+              <a href="/2017/04/26/面试题9.2.变态跳台阶/" rel="next" title="面试题9.2.变态跳台阶">
+                <i class="fa fa-chevron-left"></i> 面试题9.2.变态跳台阶
               </a>
             
           </div>
@@ -406,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/14/Leetcode_Valid Sudoku/" rel="prev" title="Valid Sudoku">
-                Valid Sudoku <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -435,8 +439,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/14/Leetcode_Implement strStr()/"
-           data-title="Implement strStr()" data-url="http://yoursite.com/2017/02/14/Leetcode_Implement strStr()/">
+      <div class="ds-thread" data-thread-key="2017/04/26/面试题9.3.矩形覆盖/"
+           data-title="矩形覆盖" data-url="http://yoursite.com/2017/04/26/面试题9.3.矩形覆盖/">
       </div>
     
   </div>
@@ -460,17 +464,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/jordan.png"
@@ -560,22 +555,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
