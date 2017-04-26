@@ -235,6 +235,178 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/面试题9.2.变态跳台阶/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="GreatP">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/jordan.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="GreatP'Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/26/面试题9.2.变态跳台阶/" itemprop="url">
+                  面试题9.2.变态跳台阶
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-26T16:43:08+08:00">
+                2017-04-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/剑指offer/" itemprop="url" rel="index">
+                    <span itemprop="name">剑指offer</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/26/面试题9.2.变态跳台阶/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/26/面试题9.2.变态跳台阶/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>题目描述</strong></p>
+<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法</p>
+<p><strong>思路解析</strong></p>
+<p>链接：<a href="https://www.nowcoder.com/questionTerminal/22243d016f6b47f2a6928b4313c85387" target="_blank" rel="external">https://www.nowcoder.com/questionTerminal/22243d016f6b47f2a6928b4313c85387</a><br>来源：牛客网</p>
+<p>f(1) = 1<br>  f(2) = f(2-1) + f(2-2)         //f(2-2) 表示2阶一次跳2阶的次数。<br>  f(3) = f(3-1) + f(3-2) + f(3-3)<br>  …<br>  f(n) = f(n-1) + f(n-2) + f(n-3) + … + f(n-(n-1)) + f(n-n)  </p>
+<p>  说明：<br>  1）这里的f(n) 代表的是n个台阶有一次1,2,…n阶的 跳法数。<br>  2）n = 1时，只有1种跳法，f(1) = 1<br>  3)  n = 2时，会有两个跳得方式，一次1阶或者2阶，这回归到了问题（1） ，f(2) = f(2-1) + f(2-2)<br>  4)  n = 3时，会有三种跳得方式，1阶、2阶、3阶</p>
+<p>那么就是第一次跳出1阶后面剩下：f(3-1);第一次跳出2阶，剩下f(3-2)；第一次3阶，那么剩下f(3-3) </p>
+<p>因此结论是f(3) = f(3-1)+f(3-2)+f(3-3)<br>  5) n = n时，会有n中跳的方式，1阶、2阶…n阶，得出结论： </p>
+<p>​    f(n) = f(n-1)+f(n-2)+…+f(n-(n-1)) + f(n-n) = f(0) + f(1) + f(2) + f(3) + … + f(n-1) </p>
+<p>  6) 由以上已经是一种结论，但是为了简单，我们可以继续简化： </p>
+<pre><code>f(n-1) = f(0) + f(1)+f(2)+f(3) + ... + f((n-1)-1) = f(0) + f(1) + f(2) + f(3) + ... + f(n-2) 
+
+f(n) = f(0) + f(1) + f(2) + f(3) + ... + f(n-2) +f(n-1) = f(n-1) + f(n-1) 
+
+ 可以得出： 
+
+f(n) = 2*f(n-1) 
+</code></pre><p>  7) 得出最终结论,在n阶台阶，一次有1、2、…n阶的跳的方式时，总得跳法为： </p>
+<pre><code>| 1       ,(n=0 )  
+</code></pre><p>  f(n) =     | 1       ,(n=1 ) </p>
+<pre><code>| 2*f(n-1),(n&gt;=2)
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">jumpFloor</span><span class="params">(<span class="keyword">int</span> target)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(target == <span class="number">0</span>)</div><div class="line">      <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(target == <span class="number">1</span>)</div><div class="line">      <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> zeroStep = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> firstStep = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= target; i++)&#123;</div><div class="line">      result = <span class="number">2</span>*firstStep;</div><div class="line">      firstStep = result;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/面试题9.1.跳台阶/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1661,191 +1833,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/Leetcode22_Generate Parentheses/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="GreatP">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/jordan.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="GreatP'Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="GreatP'Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/22/Leetcode22_Generate Parentheses/" itemprop="url">
-                  Leetcode22_Generate Parentheses
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T23:48:38+08:00">
-                2017-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  . 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/22/Leetcode22_Generate Parentheses/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/Leetcode22_Generate Parentheses/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">题目：</div><div class="line">Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</div><div class="line">For example, given n = 3, a solution set is:</div><div class="line"></div><div class="line">[</div><div class="line">  &quot;((()))&quot;,</div><div class="line">  &quot;(()())&quot;,</div><div class="line">  &quot;(())()&quot;,</div><div class="line">  &quot;()(())&quot;,</div><div class="line">  &quot;()()()&quot;</div><div class="line">]</div></pre></td></tr></table></figure>
-<ul>
-<li>所谓Backtracking是这样的思路，在当前局面下，你有若干种选择；那么尝试每一种选择，如果已经发现某种选择肯定不行（违反了某些限定条件），就返回；如果某种选择到最后发现是正解，就将其加入解集</li>
-<li>所以思考递归题时，只要明确三点：选择（Options）、限制（Restrains）、结束条件（Termination）</li>
-<li>对于这道题<ul>
-<li>任何时候有两种选择<ul>
-<li>加左括号</li>
-<li>加右括号</li>
-</ul>
-</li>
-<li>限制条件<ul>
-<li>左括号用完了，就不能再用左括号了</li>
-<li>右括号不能比左括号多</li>
-</ul>
-</li>
-<li>结束条件<ul>
-<li>左右括号都用完了</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="把这道题的内存申请到GC过程画出来？？？"><a href="#把这道题的内存申请到GC过程画出来？？？" class="headerlink" title="把这道题的内存申请到GC过程画出来？？？"></a>把这道题的内存申请到GC过程画出来？？？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">思路拼接起来：</div><div class="line"><span class="keyword">if</span>(左右括号都用完)&#123;</div><div class="line">  加入解集，返回</div><div class="line">&#125;</div><div class="line"><span class="comment">//否则开始各种选择</span></div><div class="line"><span class="keyword">if</span>(左括号还可以用)&#123;</div><div class="line">  加入一个左括号，继续递归</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(右括号小于左括号)&#123;</div><div class="line">  加入一个右括号继续递归</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution7</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">generateParenthesis</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div><div class="line">        backtrack(list, <span class="string">""</span>, <span class="number">0</span>, <span class="number">0</span>, n);</div><div class="line">        <span class="keyword">return</span> list;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;String&gt; list, String str, <span class="keyword">int</span> open, <span class="keyword">int</span> close, <span class="keyword">int</span> max)</span></span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(str.length() == max*<span class="number">2</span>)&#123;</div><div class="line">            list.add(str);</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(open &lt; max)</div><div class="line">            backtrack(list, str+<span class="string">"("</span>, open+<span class="number">1</span>, close, max);</div><div class="line">        <span class="keyword">if</span>(close &lt; open)</div><div class="line">            backtrack(list, str+<span class="string">")"</span>, open, close+<span class="number">1</span>, max);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1893,7 +1880,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">43</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
