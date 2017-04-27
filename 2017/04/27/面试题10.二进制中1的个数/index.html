@@ -59,51 +59,48 @@
 
 
 <meta name="description" content="题目描述
-输入一个链表，从尾到头打印链表每个节点的值
-解题思路
-方法1：
+输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示
+思路解析
 
-先遍历链表到最后一个节点，从尾到头打印
-建立栈的数据模型，先进后出
+方法1：容易引起死循环的解法
+判断n的个位上是否为1（和1做&amp;amp;运算）
+然后将n右移一位（n = n &amp;gt;&amp;gt; 1）
+这样做当n为负数时，容易形成死循环
 
-方法2：
 
-由方法1得出可以由栈实现，而递归本质就是栈，可以用递归解决问题
 
-123456789101112131415161718192021222324252627282930313233//方法1：import java.util.ArrayLis">
+12345678910public class Solution&amp;#123;  public int NumberOf1(int n)&amp;#1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试题5.从尾到头打印链表">
-<meta property="og:url" content="http://yoursite.com/2017/04/22/面试题5.倒序输出链表/index.html">
+<meta property="og:title" content="面试题10.二进制中1的个数">
+<meta property="og:url" content="http://yoursite.com/2017/04/27/面试题10.二进制中1的个数/index.html">
 <meta property="og:site_name" content="GreatP'Blog">
 <meta property="og:description" content="题目描述
-输入一个链表，从尾到头打印链表每个节点的值
-解题思路
-方法1：
+输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示
+思路解析
 
-先遍历链表到最后一个节点，从尾到头打印
-建立栈的数据模型，先进后出
+方法1：容易引起死循环的解法
+判断n的个位上是否为1（和1做&amp;amp;运算）
+然后将n右移一位（n = n &amp;gt;&amp;gt; 1）
+这样做当n为负数时，容易形成死循环
 
-方法2：
 
-由方法1得出可以由栈实现，而递归本质就是栈，可以用递归解决问题
 
-123456789101112131415161718192021222324252627282930313233//方法1：import java.util.ArrayLis">
-<meta property="og:updated_time" content="2017-04-22T15:05:10.000Z">
+12345678910public class Solution&amp;#123;  public int NumberOf1(int n)&amp;#1">
+<meta property="og:updated_time" content="2017-04-27T03:17:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试题5.从尾到头打印链表">
+<meta name="twitter:title" content="面试题10.二进制中1的个数">
 <meta name="twitter:description" content="题目描述
-输入一个链表，从尾到头打印链表每个节点的值
-解题思路
-方法1：
+输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示
+思路解析
 
-先遍历链表到最后一个节点，从尾到头打印
-建立栈的数据模型，先进后出
+方法1：容易引起死循环的解法
+判断n的个位上是否为1（和1做&amp;amp;运算）
+然后将n右移一位（n = n &amp;gt;&amp;gt; 1）
+这样做当n为负数时，容易形成死循环
 
-方法2：
 
-由方法1得出可以由栈实现，而递归本质就是栈，可以用递归解决问题
 
-123456789101112131415161718192021222324252627282930313233//方法1：import java.util.ArrayLis">
+12345678910public class Solution&amp;#123;  public int NumberOf1(int n)&amp;#1">
 
 
 
@@ -131,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/22/面试题5.倒序输出链表/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/27/面试题10.二进制中1的个数/"/>
 
 
 
 
 
-  <title> 面试题5.从尾到头打印链表 | GreatP'Blog </title>
+  <title> 面试题10.二进制中1的个数 | GreatP'Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -270,7 +267,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/面试题5.倒序输出链表/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/27/面试题10.二进制中1的个数/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="GreatP">
@@ -294,7 +291,7 @@
             
             
               
-                面试题5.从尾到头打印链表
+                面试题10.二进制中1的个数
               
             
           </h1>
@@ -309,8 +306,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:05:10+08:00">
-                2017-04-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-27T11:17:42+08:00">
+                2017-04-27
               </time>
             
 
@@ -350,8 +347,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/22/面试题5.倒序输出链表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/22/面试题5.倒序输出链表/" itemprop="commentCount"></span>
+                <a href="/2017/04/27/面试题10.二进制中1的个数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/27/面试题10.二进制中1的个数/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -383,18 +380,33 @@
 
       
         <p><strong>题目描述</strong></p>
-<p>输入一个链表，从尾到头打印链表每个节点的值</p>
-<p><strong>解题思路</strong></p>
-<p>方法1：</p>
+<p>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示</p>
+<p><strong>思路解析</strong></p>
 <ul>
-<li>先遍历链表到最后一个节点，从尾到头打印</li>
-<li>建立栈的数据模型，先进后出</li>
+<li>方法1：容易引起死循环的解法<ul>
+<li>判断n的个位上是否为1（和1做&amp;运算）</li>
+<li>然后将n右移一位（n = n &gt;&gt; 1）</li>
+<li>这样做当n为负数时，容易形成死循环</li>
 </ul>
-<p>方法2：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">NumberOf1</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(n &amp; <span class="number">1</span>)&#123;</div><div class="line">      count++;</div><div class="line">      n = n &gt;&gt; <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> count;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>由方法1得出可以由栈实现，而递归本质就是栈，可以用递归解决问题</li>
+<li>方法2：判断每一位是不是为1<ul>
+<li>判断个位是不是为1（&amp;1）</li>
+<li>将1左移一位（1 &lt;&lt; 1）</li>
+<li>这样做需要循环n次（n位）</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法1：</span></div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Stack;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">printListFromTailToHead</span><span class="params">(ListNode listNode)</span></span>&#123;</div><div class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;Integer&gt;();	<span class="comment">//创建栈对象</span></div><div class="line">    ArrayList&lt;Integer&gt; arraylist = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();	<span class="comment">//创建ArrayList对象，返回值一致</span></div><div class="line">    ListNode pNode = listNode;	<span class="comment">//将给定链表赋值给pNode,尽量避免操作原来的链表</span></div><div class="line">    </div><div class="line">    <span class="keyword">while</span>(pNode != <span class="keyword">null</span>)&#123;		<span class="comment">//遍历链表</span></div><div class="line">      stack.push(pNode.val);	<span class="comment">//将链表数值入栈</span></div><div class="line">      pNode = pNode.next;		</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">while</span>(!stack.isEmpty())&#123;	<span class="comment">//判断栈是否还有元素</span></div><div class="line">      arraylist.add(stack.pop());		<span class="comment">//出栈，将出栈元素放到arraylist中返回</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arraylist;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//方法2：递归</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  ArrayList&lt;Integer&gt; arraylist = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">  <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">printListFromTailToHead</span><span class="params">(ListNode listNode)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(listNode == <span class="keyword">null</span>)</div><div class="line">      <span class="keyword">return</span> arraylist;</div><div class="line">     <span class="keyword">this</span>.printListFromTailToHead(listNode.next);</div><div class="line">    arraylist.add(listNode.val);</div><div class="line">    <span class="keyword">return</span> arraylist;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">NumberOf1</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> flag = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(flag != <span class="number">0</span>)&#123;</div><div class="line">      <span class="keyword">if</span>((flat &amp; n) != <span class="number">0</span>)&#123;</div><div class="line">        count++;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> count;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>方法3：把一个整数减去1，再和原来的n做&amp;运算，会把最右边一个1变为0，n的二进制中有多少个1，就可以进行多少个这样的操作</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">NumberOf1</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)&#123;</div><div class="line">      count++;</div><div class="line">      n = (n-<span class="number">1</span>)&amp;n;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> count;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>方法4：将n转换为二进制字符串</li>
+</ul>
 
       
     </div>
@@ -421,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/22/面试题4.替换空格符/" rel="next" title="面试题4.替换空格符">
-                <i class="fa fa-chevron-left"></i> 面试题4.替换空格符
+              <a href="/2017/04/26/面试题9.3.矩形覆盖/" rel="next" title="矩形覆盖">
+                <i class="fa fa-chevron-left"></i> 矩形覆盖
               </a>
             
           </div>
@@ -430,10 +442,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/26/面试题3.二维数组中查找/" rel="prev" title="面试题3.二维数组查找">
-                面试题3.二维数组查找 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -459,8 +467,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/22/面试题5.倒序输出链表/"
-           data-title="面试题5.从尾到头打印链表" data-url="http://yoursite.com/2017/04/22/面试题5.倒序输出链表/">
+      <div class="ds-thread" data-thread-key="2017/04/27/面试题10.二进制中1的个数/"
+           data-title="面试题10.二进制中1的个数" data-url="http://yoursite.com/2017/04/27/面试题10.二进制中1的个数/">
       </div>
     
   </div>
